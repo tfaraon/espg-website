@@ -1,8 +1,9 @@
 ---
 title: ESPG Fleece Jumpers have arrived!
-date: 2026-08-19T13:00:00
+date: 2026-10-22T13:00:00.000+11:00
 location: McCoy Tea Room (or at ESPG events)
-description: Navy fleece jumpers with the ESPG logo, available from S to 2XL. Limited stock, first come first served.
+description: Navy fleece jumpers with the ESPG logo, available from S to 2XL.
+  Limited stock, first come first served.
 image: /uploads/espg-fleece-jumpers.jpg
 draft: false
 ---
