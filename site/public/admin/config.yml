@@ -23,7 +23,7 @@ publish_mode: simple
 # under site/public/uploads/ are served at /espg-website/uploads/.
 # When the custom domain is connected (Phase 7), change public_folder to "/uploads".
 media_folder: "site/public/uploads"
-public_folder: "/espg-website/uploads"
+public_folder: "/uploads"
 
 # Site URL — Decap uses this for preview links.
 site_url: https://james-lagreca.github.io/espg-website
