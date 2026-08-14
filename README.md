@@ -3,9 +3,14 @@
 The Earth Sciences Postgraduate Group at the University of Melbourne, on the
 public web.
 
-**Live:** https://james-lagreca.github.io/espg-website
-**Admin:** https://james-lagreca.github.io/espg-website/admin/
-**Repo:** https://github.com/james-lagreca/espg-website
+forked from the original dev git 
+
+
+**Live:** https://espg-gsa.org/
+**Admin:** https://espg-gsa.org/admin/
+**Repo:** https://github.com/tfaraon/espg-website
+
+**Repo original:** https://github.com/james-lagreca/espg-website
 
 This README is for **developers**. Editors should read [MAINTAINERS.md](./MAINTAINERS.md).
 The Decap CMS setup walkthrough is at [docs/decap-cms-setup.md](./docs/decap-cms-setup.md).
