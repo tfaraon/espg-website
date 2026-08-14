@@ -2,21 +2,22 @@
 
 :root {
   /* Palette
-   * Accent shifted from yellow-orange copper to a red-orange "rust" so the
-   * warm end of the climate-stripes band visually continues into the page. */
-  --bg: #18191a;
-  --bg-warm: #1d1e1c;
-  --bg-cool: #161819;
-  --bg-card: #1f2122;
-  --bone: #e6e1d6;
-  --bone-soft: #a6a097;
-  --muted: #6a655c;
+   * Light theme — background is Pantone 11-4101 TCX "Stalactite" (#f7f6f3).
+   * Text and accents inverted from the original dark "stratigraphic" theme
+   * so contrast still works: dark ink text, same copper/moss accents. */
+  --bg: #f7f6f3;
+  --bg-warm: #f5f3ee;
+  --bg-cool: #f3f4f1;
+  --bg-card: #efece5;
+  --bone: #2a2925;
+  --bone-soft: #5c584f;
+  --muted: #8a857a;
   --copper: #c84a25;
   --copper-soft: #8a3318;
   --copper-bright: #e26535;
   --moss: #4a5c33;
-  --rule: #2e2f30;
-  --rule-warm: #3a3530;
+  --rule: #ded9d0;
+  --rule-warm: #d6cfc2;
 
   /* Type */
   --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
