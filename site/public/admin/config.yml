@@ -9,11 +9,11 @@ backend:
   # Cloudflare Worker OAuth proxy.
   # Source: oauth-worker/src/index.js. Deployed via `npx wrangler deploy`.
   base_url: https://espg-oauth.james-lagreca.workers.dev
-  auth_endpoint: auth
+  auth_endpoint: repo
 
 # Allow local editing via `npx decap-server` running on localhost:8081.
 # Comment this out (or set to false) for production.
-local_backend: true
+# local_backend: true
 
 # Skip the slow first-load OAuth re-check.
 publish_mode: simple
