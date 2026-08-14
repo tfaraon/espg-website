@@ -44,6 +44,7 @@ const wdFmt = new Intl.DateTimeFormat('en-AU', { weekday: 'short' });
                   <span class="reg-date">
                     {day}<span class="mo">{mo} '{e.data.date.getFullYear().toString().slice(2)}</span>
                   </span>
+                  {e.data.image && <img class="reg-thumb" src={e.data.image} alt="" loading="lazy" />}
                   <div class="reg-mid">
                     <h3>{e.data.title}</h3>
                     <span class="loc">{wd} · {e.data.location}</span>
@@ -72,6 +73,7 @@ const wdFmt = new Intl.DateTimeFormat('en-AU', { weekday: 'short' });
                   <span class="reg-date">
                     {day}<span class="mo">{mo} '{e.data.date.getFullYear().toString().slice(2)}</span>
                   </span>
+                  {e.data.image && <img class="reg-thumb" src={e.data.image} alt="" loading="lazy" />}
                   <div class="reg-mid">
                     <h3>{e.data.title}</h3>
                     <span class="loc">{wd} · {e.data.location}</span>
@@ -98,13 +100,19 @@ const wdFmt = new Intl.DateTimeFormat('en-AU', { weekday: 'short' });
   .register li { border-bottom: 1px solid var(--rule); }
   .register a {
     display: grid;
-    grid-template-columns: minmax(0, 4.5rem) minmax(0, 1fr) minmax(0, auto);
+    grid-template-columns: minmax(0, 4.5rem) minmax(0, 3.5rem) minmax(0, 1fr) minmax(0, auto);
     gap: clamp(1rem, 2vw, 2rem);
     padding: 1.25rem 0;
     text-decoration: none;
     color: inherit;
     align-items: center;
     transition: background 160ms;
+  }
+  .reg-thumb {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border: 1px solid var(--rule);
   }
   .register a:hover { background: rgba(200, 74, 37, 0.04); color: inherit; }
   .register a:hover h3 { color: var(--copper); }
@@ -133,6 +141,7 @@ const wdFmt = new Intl.DateTimeFormat('en-AU', { weekday: 'short' });
   .register a:hover .arrow-mark { color: var(--copper); }
   @media (max-width: 720px) {
     .register a { grid-template-columns: minmax(0, 4.5rem) 1fr; row-gap: 0.5rem; }
+    .reg-thumb { display: none; }
     .arrow-mark { display: none; }
   }
 </style>

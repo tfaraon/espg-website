@@ -15,6 +15,7 @@ const featured = allEvents.slice(0, 3).map((e) => ({
   date: e.data.date,
   title: e.data.title,
   location: e.data.location,
+  image: e.data.image,
 }));
 
 const register = allEvents.slice(0, 6);
@@ -38,15 +39,15 @@ const mostRecentPast = pastCommittee[0];
 
 <SocietyLayout
   title="ESPG — Earth Sciences Postgraduate Group"
-  description="The Earth Sciences Postgraduate Group is a student-run society at the University of Melbourne for postgraduates working across geosciences, atmospheric, and environmental sciences."
+  description="The Earth Sciences Postgraduate Group is a student-run society at the University of Melbourne for postgraduates working across geology, geophysics, atmospheric and environmental sciences."
 >
   <SocietyMasthead featured={featured} />
 
   <!-- REGISTER -->
   <section id="events" class="section">
     <p class="sect-tag">Register</p>
-    <h2>Upcoming events</h2>
-    <p class="muted">Full archive on the <a href={url('/events')}>events page</a>.</p>
+    <h2>Upcoming events, <em>tabulated.</em></h2>
+    <p class="muted">The six closest dates. Full archive on the <a href={url('/events')}>events page</a>.</p>
 
     {
       register.length === 0 ? (
@@ -60,8 +61,9 @@ const mostRecentPast = pastCommittee[0];
               <li>
                 <a href={url(`/events/${e.id}`)}>
                   <span class="reg-date">
-                    {day}<span class="mo">{mo} {e.data.date.getFullYear().toString()}</span>
+                    {day}<span class="mo">{mo} '{e.data.date.getFullYear().toString().slice(2)}</span>
                   </span>
+                  {e.data.image && <img class="reg-thumb" src={e.data.image} alt="" loading="lazy" />}
                   <div class="reg-mid">
                     <h3>{e.data.title}</h3>
                     <span class="loc">{wd} · {e.data.location}</span>
@@ -75,7 +77,7 @@ const mostRecentPast = pastCommittee[0];
       )
     }
     <div class="cta-row">
-      <a href={url('/events')} class="cta cta--ghost">Full list <span class="arrow">→</span></a>
+      <a href={url('/events')} class="cta cta--ghost">Full register <span class="arrow">→</span></a>
       <span class="cta-aside">Subscribe to event emails when you join.</span>
     </div>
   </section>
@@ -83,26 +85,30 @@ const mostRecentPast = pastCommittee[0];
   <!-- MEMBERSHIP -->
   <section id="membership" class="section section--warm">
     <p class="sect-tag">Membership</p>
-    <h2>Free <em>for any postgrad</em> in the school.</h2>
+    <h2>Free. <em>For any postgrad</em> in the school.</h2>
     <div class="join-grid">
       <div>
         <p>
-          Membership takes about a minute to sign up. There are no fees, your registration helps fund events,
-          and you stay on the mailing list for as long as you're a postgraduate in SGEAS.
+          Membership takes about a minute to sign up. There are no fees, no formal commitments,
+          and you can stay on the mailing list for as long as you're a postgraduate in SGEAS.
         </p>
         <ul class="join-pills">
-          <li><span class="ix">01</span><span class="it">Event emails — BBQs, pub nights, conferences.</span></li>
-          <li><span class="ix">05</span><span class="it">Career, networking and social events.</span></li>
-          <li><span class="ix">03</span><span class="it">School-level representation.</span></li>
+          <li><span class="ix">01</span><span class="it">Event emails — BBQs, field trips, pub nights, conferences.</span></li>
+          <li><span class="ix">02</span><span class="it">Conference call for abstracts each August.</span></li>
+          <li><span class="ix">03</span><span class="it">School-level representation through the HDR rep.</span></li>
+          <li><span class="ix">04</span><span class="it">Travel and conference bursaries (where budget allows).</span></li>
+          <li><span class="ix">05</span><span class="it">Occasional opportunities from outside the school.</span></li>
         </ul>
         <div class="cta-row">
-          <a href={url('/membership')} class="cta">&lt; Join the Group &gt;</a>
+          <a href={url('/membership')} class="cta">Join the society <span class="arrow">→</span></a>
+          <a href={url('/membership')} class="cta cta--ghost">Mailing list only</a>
         </div>
       </div>
       <aside class="join-card">
         <dl class="join-stat">
-          <dt>Cost</dt><dd><strong>Free</strong> for SGEAS students</dd>
-          <dt>Affiliation</dt><dd>Unimelb Graduate Student Association</dd>
+          <dt>Cost</dt><dd><strong>Free</strong> for SGEAS HDRs</dd>
+          <dt>Conference</dt><dd><strong>Annual</strong> postgraduate-led</dd>
+          <dt>Affiliation</dt><dd>UMSU Graduate Student Association</dd>
           <dt>School</dt><dd>Geography, Earth &amp; Atmospheric Sciences</dd>
         </dl>
       </aside>
@@ -114,22 +120,23 @@ const mostRecentPast = pastCommittee[0];
     <p class="sect-tag">Conference</p>
     <div class="conf-grid">
       <div>
-        <h2><em>VUEESC x GESSS</em> 4th-6th November 2026<br>student-led earth and environmental science conference.</h2>
+        <h2>An annual <em>postgraduate</em> conference, in October.</h2>
         <p>
-          Three days of student talks (subject to abstract volume) alongside some invited keynotes from across the earth sciences.
+          Three days of HDR-led talks alongside invited keynotes from across the earth sciences.
           The conference is a supportive venue for students to present work-in-progress, get
           feedback from peers, and meet researchers from outside their immediate group.
         </p>
-        <p class="muted">Call for abstracts and registrations now open.</p>
+        <p class="muted">Registration opens August. Call for abstracts the same week.</p>
         <a href={url('/conference')} class="cta">Conference details <span class="arrow">→</span></a>
       </div>
       <aside class="conf-card">
         <dl>
-          <dt>Dates</dt><dd><strong>4th-6th Nov 2026</strong></dd>
-          <dt>Location</dt><dd>Lvl 2 McCoy Building, University of Melbourne</dd>
+          <dt>Dates</dt><dd><strong>18–20 Oct 2026</strong></dd>
+          <dt>Location</dt><dd>University of Melbourne, Parkville</dd>
+          <dt>Theme</dt><dd>TBA</dd>
           <dt>Keynote</dt><dd>To be announced</dd>
-          <dt>Format</dt><dd>Talks · posters · concurrent sessions</dd>
-          <dt>Abstracts</dt><dd>Open now · close Sep 18th</dd>
+          <dt>Format</dt><dd>Talks · posters · lightning</dd>
+          <dt>Abstracts</dt><dd>Open Aug · close Sep</dd>
         </dl>
       </aside>
     </div>
@@ -138,11 +145,11 @@ const mostRecentPast = pastCommittee[0];
   <!-- COMMITTEE -->
   <section id="committee" class="section section--cool">
     <p class="sect-tag">Committee {CURRENT_YEAR}</p>
-    <h2>Elected at the AGM <em>each year.</em></h2>
+    <h2>Elected at the AGM, <em>each March.</em></h2>
     {
       currentCommittee.length > 0 ? (
         <>
-          <p class="muted">Current committee members</p>
+          <p class="muted">All current postgraduates in SGEAS.</p>
           <ul class="committee-grid">
             {currentCommittee.map((m) => (
               <li>
@@ -212,13 +219,19 @@ const mostRecentPast = pastCommittee[0];
   }
   .register a {
     display: grid;
-    grid-template-columns: minmax(0, 4.5rem) minmax(0, 1fr) minmax(0, auto);
+    grid-template-columns: minmax(0, 4.5rem) minmax(0, 3.5rem) minmax(0, 1fr) minmax(0, auto);
     gap: clamp(1rem, 2vw, 2rem);
     padding: 1.25rem 0;
     text-decoration: none;
     color: inherit;
     align-items: center;
     transition: background 160ms;
+  }
+  .reg-thumb {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border: 1px solid var(--rule);
   }
   .register a:hover {
     background: rgba(200, 74, 37, 0.04);
@@ -260,6 +273,7 @@ const mostRecentPast = pastCommittee[0];
   .register a:hover .arrow-mark { color: var(--copper); }
   @media (max-width: 720px) {
     .register a { grid-template-columns: minmax(0, 4.5rem) 1fr; row-gap: 0.5rem; }
+    .reg-thumb { display: none; }
     .arrow-mark { display: none; }
   }
 
