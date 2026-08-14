@@ -3,7 +3,7 @@ name: Thomas Faraon
 role: President
 year: 2026
 order: 1
-photo: /espg-website/uploads/pxl_20260217_192201271.jpg
+photo: /uploads/pxl_20260217_192201271.jpg
 email: thomas.faraon@student.unimelb.edu.au
 ---
 Hey there ! 

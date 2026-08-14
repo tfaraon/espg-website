@@ -31,3 +31,4 @@ pnpm-debug.log*
 /espg-website-briefing.md
 /Logos/
 
+*.kate-swp
