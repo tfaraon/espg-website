@@ -13,7 +13,7 @@ backend:
 
 # Allow local editing via `npx decap-server` running on localhost:8081.
 # Comment this out (or set to false) for production.
-local_backend: true
+# local_backend: true
 
 # Skip the slow first-load OAuth re-check.
 publish_mode: simple
@@ -25,10 +25,10 @@ public_folder: "/uploads"
 
 # Site URL — Decap uses this for preview links.
 site_url: https://espg-gsa.org
-display_url: https://espg-gsa.org
+display_url: espg-gsa.org
 
 # Logo shown at the top of the editor.
-logo_url: /espg-website/espg-logo.svg
+logo_url: /espg-logo.svg
 
 collections:
   # ----- EVENTS -----------------------------------------------------------
