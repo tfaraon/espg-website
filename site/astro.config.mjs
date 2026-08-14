@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://james-lagreca.github.io',
-  base: '/espg-website',
+  site: 'https://tfaraon.github.io',
   trailingSlash: 'ignore',
 });
