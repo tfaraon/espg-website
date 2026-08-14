@@ -153,6 +153,7 @@ const mostRecentPast = pastCommittee[0];
           <ul class="committee-grid">
             {currentCommittee.map((m) => (
               <li>
+                {m.data.photo && <img class="member-photo" src={m.data.photo} alt={m.data.name} loading="lazy" />}
                 <span class="role">{m.data.role}</span>
                 <span class="desc">{m.data.name}</span>
               </li>
@@ -174,6 +175,7 @@ const mostRecentPast = pastCommittee[0];
               <ul class="committee-grid">
                 {mostRecentPast.entries.map((m) => (
                   <li>
+                    {m.data.photo && <img class="member-photo" src={m.data.photo} alt={m.data.name} loading="lazy" />}
                     <span class="role">{m.data.role}</span>
                     <span class="desc">{m.data.name}</span>
                   </li>
@@ -406,6 +408,16 @@ const mostRecentPast = pastCommittee[0];
     list-style: none;
     background: var(--bg);
     padding: 1.1rem 1.2rem;
+  }
+  .member-photo {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0.6rem;
+    border: 1px solid var(--rule);
+    background: var(--bg-card);
   }
   .committee-grid .role {
     display: block;
