@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import SocietyLayout from '../layouts/SocietyLayout.astro';
 import PageHeader from '../components/society/PageHeader.astro';
 
@@ -22,6 +22,12 @@ const pastYears = [...pastByYear.keys()].sort((a, b) => b - a);
 // Roles we expect to fill each year, used to render placeholder cards when
 // the current committee hasn't been elected yet.
 const PLACEHOLDER_ROLES = ['President', 'Treasurer', 'Secretary', 'General Member'];
+
+// Pre-render each current member's bio (the markdown body) so we can drop
+// the compiled <Content /> straight into the template below.
+const currentWithBio = await Promise.all(
+  current.map(async (m) => ({ member: m, Content: (await render(m)).Content })),
+);
 ---
 
 <SocietyLayout
@@ -58,7 +64,7 @@ const PLACEHOLDER_ROLES = ['President', 'Treasurer', 'Secretary', 'General Membe
   <section class="block">
     <h2>Committee {CURRENT_YEAR}</h2>
     {
-      current.length === 0 ? (
+      currentWithBio.length === 0 ? (
         <>
           <p class="muted">
             The {CURRENT_YEAR} committee will be elected at the AGM in March. If you'd like to
@@ -76,15 +82,23 @@ const PLACEHOLDER_ROLES = ['President', 'Treasurer', 'Secretary', 'General Membe
         </>
       ) : (
         <ul class="committee-grid">
-          {current.map((m) => (
-            <li>
-              <span class="role">{m.data.role}</span>
-              <span class="name">{m.data.name}</span>
-              {m.data.email && (
-                <a class="email" href={`mailto:${m.data.email}`}>
-                  {m.data.email}
-                </a>
+          {currentWithBio.map(({ member: m, Content }) => (
+            <li class="member">
+              {m.data.photo && (
+                <img class="photo" src={m.data.photo} alt={m.data.name} loading="lazy" />
               )}
+              <div class="member-body">
+                <span class="role">{m.data.role}</span>
+                <span class="name">{m.data.name}</span>
+                {m.data.email && (
+                  <a class="email" href={`mailto:${m.data.email}`}>
+                    {m.data.email}
+                  </a>
+                )}
+                <div class="bio">
+                  <Content />
+                </div>
+              </div>
             </li>
           ))}
         </ul>
@@ -98,9 +112,14 @@ const PLACEHOLDER_ROLES = ['President', 'Treasurer', 'Secretary', 'General Membe
         <h2>Past committee — {yr}</h2>
         <ul class="committee-grid committee-grid--past">
           {pastByYear.get(yr)!.map((m) => (
-            <li>
-              <span class="role">{m.data.role}</span>
-              <span class="name">{m.data.name}</span>
+            <li class="member member--past">
+              {m.data.photo && (
+                <img class="photo photo--small" src={m.data.photo} alt={m.data.name} loading="lazy" />
+              )}
+              <div class="member-body">
+                <span class="role">{m.data.role}</span>
+                <span class="name">{m.data.name}</span>
+              </div>
             </li>
           ))}
         </ul>
@@ -180,6 +199,37 @@ const PLACEHOLDER_ROLES = ['President', 'Treasurer', 'Secretary', 'General Membe
     flex-direction: column;
     gap: 0.2rem;
   }
+
+  .committee-grid li.member {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .committee-grid li.member--past {
+    align-items: center;
+  }
+
+  .photo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: none;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+  }
+  .photo--small {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .member-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
   .committee-grid .role {
     font-family: var(--font-mono);
     font-size: 0.7rem;
@@ -199,8 +249,21 @@ const PLACEHOLDER_ROLES = ['President', 'Treasurer', 'Secretary', 'General Membe
     font-size: 0.75rem;
     color: var(--bone-soft);
     margin-top: 0.2rem;
+    word-break: break-word;
   }
   .committee-grid .email:hover { color: var(--copper); }
+
+  .committee-grid .bio {
+    margin-top: 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--bone-soft);
+  }
+  .committee-grid .bio :global(p) {
+    margin: 0 0 0.5rem;
+    max-width: none;
+  }
+  .committee-grid .bio :global(p:last-child) { margin-bottom: 0; }
 
   .committee-grid li.placeholder .name {
     color: var(--bone-soft);
