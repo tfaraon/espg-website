@@ -11,7 +11,7 @@ and [docs/decap-cms-setup.md](./docs/decap-cms-setup.md).
 
 ## TL;DR
 
-- **Editor URL:** https://james-lagreca.github.io/espg-website/admin/
+- **Editor URL:** https://espg-gsa.org/admin/
 - Log in with your **GitHub account**. (If you don't have one, see [§ Adding a new editor](#adding-a-new-editor) — someone with access has to invite you first.)
 - Click a collection on the left → **New** → fill the form → **Publish**.
 - The website rebuilds itself within about a minute. No further action needed.
@@ -32,13 +32,13 @@ rebuilds the site, and the new content appears.
 The whole thing costs roughly **A$15/year** (domain only), runs without you
 having to remember to renew anything except the domain, and is fully open —
 the entire site, including this page, is at
-[github.com/james-lagreca/espg-website](https://github.com/james-lagreca/espg-website).
+[github.com/tfaraon/espg-website](https://github.com/tfaraon/espg-website).
 
 ---
 
 ## Logging in
 
-1. Go to https://james-lagreca.github.io/espg-website/admin/
+1. Go to https://espg-gsa.org/admin/
 2. Click **"Log in with GitHub"**.
 3. A popup will ask you to authorise the **ESPG Content Admin** GitHub app.
    Approve it. (You only do this once.)
@@ -73,7 +73,7 @@ If you see "Log in" but clicking does nothing, see [§ When things break](#when-
      This supports formatting (bold, links, lists) using the toolbar.
 4. Click **Publish → Publish now** (top right).
 5. Wait ~1 minute. The event will appear at
-   https://james-lagreca.github.io/espg-website/events.
+   https://espg-gsa.org/events.
 
 If you make a mistake, click the event in the Events list, edit, **Publish
 now** again — it overwrites the previous version.
@@ -116,7 +116,7 @@ When the committee turns over at the AGM in March:
 3. **Publish now**.
 
 The abstract appears at
-https://james-lagreca.github.io/espg-website/conference/abstracts/.
+https://espg-gsa.org/conference/abstracts/.
 Abstracts are sorted by presenter name and grouped by session.
 
 ## Adding a conference presenter
@@ -177,12 +177,12 @@ Anyone with **write access** to the GitHub repo can log in and edit. To add
 someone:
 
 1. Go to
-   https://github.com/james-lagreca/espg-website/settings/access
+   https://github.com/tfaraon/espg-website/settings/access
    (you need to be an admin on the repo to see this).
 2. Click **Add people** → enter their GitHub username or email → choose
    **Write** role → **Add**.
 3. They'll get an email invitation. Once accepted, they can visit
-   https://james-lagreca.github.io/espg-website/admin/ and log in.
+   https://espg-gsa.org/admin/ and log in.
 
 To remove an editor (e.g. when the committee turns over), remove them from
 the repo's access list. They won't be able to log in to the admin anymore.
@@ -205,7 +205,7 @@ chair to add you (see [§ Adding a new editor](#adding-a-new-editor)).
 The site rebuilds within about a minute. If it's been longer:
 
 1. Check the build status at
-   https://github.com/james-lagreca/espg-website/actions —
+   https://github.com/tfaraon/espg-website/actions —
    look at the most recent run.
 2. If it shows a red ✗, something failed during the rebuild. Click into the
    run to see the error. Most failures are caused by malformed input
@@ -225,7 +225,7 @@ the Cloudflare Worker status.
 - Did you click **Publish now** after attaching it? Decap won't save the
   image until the entry is published.
 - Hard-refresh your browser.
-- Check the live site (https://james-lagreca.github.io/espg-website/events
+- Check the live site (https://espg-gsa.org/events
   for events), not just the admin preview.
 
 ### "I deleted something by mistake"

@@ -10,7 +10,7 @@ forked from the original dev git
 **Admin:** https://espg-gsa.org/admin/
 **Repo:** https://github.com/tfaraon/espg-website
 
-**Repo original:** https://github.com/james-lagreca/espg-website
+**Repo original:** https://github.com/tfaraon/espg-website
 
 This README is for **developers**. Editors should read [MAINTAINERS.md](./MAINTAINERS.md).
 The Decap CMS setup walkthrough is at [docs/decap-cms-setup.md](./docs/decap-cms-setup.md).
@@ -36,7 +36,7 @@ is documentation and the Decap admin shell (which Astro copies through unchanged
 Prereqs: Node ≥ 22, Git.
 
 ```bash
-git clone https://github.com/james-lagreca/espg-website.git
+git clone https://github.com/tfaraon/espg-website.git
 cd espg-website/site
 npm install
 npm run dev    # open http://localhost:4321/espg-website/
@@ -65,12 +65,12 @@ checkout → setup-node 22 → npm ci (in site/) → npm run build → upload si
 ```
 
 You can trigger a manual run from
-[Actions → Deploy to GitHub Pages → Run workflow](https://github.com/james-lagreca/espg-website/actions/workflows/deploy.yml).
+[Actions → Deploy to GitHub Pages → Run workflow](https://github.com/tfaraon/espg-website/actions/workflows/deploy.yml).
 The job typically takes 30–60 seconds.
 
 There is **no staging environment.** `main` is what's live. Decap commits go
 straight to `main`. Keep an eye on
-[the Actions tab](https://github.com/james-lagreca/espg-website/actions) for
+[the Actions tab](https://github.com/tfaraon/espg-website/actions) for
 red builds after pushes.
 
 ## Repository layout
@@ -246,7 +246,7 @@ When the committee picks a domain (candidates: `unimelb-espg.org`,
 1. Buy through Cloudflare Registrar (~A$15/year).
 2. Add 4 A records pointing to GitHub's IPs:
    `185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153`
-   plus a `CNAME` for `www → james-lagreca.github.io`.
+   plus a `CNAME` for `www → tfaraon.github.io`.
 3. In **repo Settings → Pages**, set the custom domain. GitHub creates a
    `CNAME` file in the repo.
 4. Wait for DNS to verify (minutes, occasionally hours).

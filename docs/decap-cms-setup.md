@@ -7,7 +7,7 @@ GitHub Actions deploy.
 
 The admin lives at:
 
-- **Live:** https://james-lagreca.github.io/espg-website/admin/
+- **Live:** https://espg-gsa.org/admin/
 - **Local dev:** http://localhost:4321/espg-website/admin/
 
 This document is for **you (the developer)** to do a one-time setup so the
@@ -36,7 +36,7 @@ ready to deploy.
 1. Go to https://github.com/settings/developers → **OAuth Apps** → **New OAuth App**.
 2. Fill in:
    - **Application name:** `ESPG Content Admin`
-   - **Homepage URL:** `https://james-lagreca.github.io/espg-website`
+   - **Homepage URL:** `https://espg-gsa.org`
    - **Authorization callback URL:** any placeholder, e.g.
      `https://espg-oauth.placeholder.workers.dev/callback`
      (you'll fix it after step 2.)
@@ -90,7 +90,7 @@ https://espg-oauth.your-subdomain.workers.dev/callback
    ```yaml
    backend:
      name: github
-     repo: james-lagreca/espg-website
+     repo: tfaraon/espg-website
      branch: main
      base_url: https://espg-oauth.your-subdomain.workers.dev
      auth_endpoint: auth
@@ -100,7 +100,7 @@ https://espg-oauth.your-subdomain.workers.dev/callback
 
 ## 5. Try it
 
-Open https://james-lagreca.github.io/espg-website/admin/. You should see a
+Open https://espg-gsa.org/admin/. You should see a
 **"Log in with GitHub"** button. Click it; you'll be sent to GitHub to
 authorise the OAuth app, then bounced back to the admin logged in.
 
@@ -135,9 +135,9 @@ deployed, the live admin uses GitHub OAuth regardless.
 Anyone with **write access to the repo** can log into the Decap admin with
 their GitHub account — there's no separate user list. To add a new editor:
 
-1. Go to https://github.com/james-lagreca/espg-website/settings/access
+1. Go to https://github.com/tfaraon/espg-website/settings/access
 2. **Add people** → enter their GitHub username → **Write** role → invite.
-3. They visit https://james-lagreca.github.io/espg-website/admin/ and log in.
+3. They visit https://espg-gsa.org/admin/ and log in.
 
 To remove an editor, remove them from repo access. Decap inherits permissions
 from GitHub.
