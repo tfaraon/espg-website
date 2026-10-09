@@ -1,0 +1,258 @@
+---
+/**
+ * 404 — page not found.
+ *
+ * Astro renders this to /404.html, which GitHub Pages serves for any path it
+ * cannot match. No routing configuration is needed.
+ *
+ * The page is built around the stratigraphic idea the rest of the site already
+ * uses: a page that is not here is a missing interval. The column below is a
+ * measured section with an unconformity where the requested page should sit,
+ * which says "nothing was preserved at this level" more precisely than a
+ * shrug, and gives a visitor somewhere to look while they read the links.
+ */
+import SocietyLayout from '../layouts/SocietyLayout.astro';
+import PageHeader from '../components/society/PageHeader.astro';
+import { url } from '../lib/url';
+
+const destinations = [
+  { label: 'Events', href: '/events', note: 'BBQs, field trips, pub nights, Shut Up and Write.' },
+  { label: 'Membership', href: '/membership', note: 'Free for any postgrad in the school.' },
+  { label: 'Participate', href: '/participate', note: 'Committee roles and how to get involved.' },
+  { label: 'Conference', href: '/conference', note: 'Program, abstracts and presenters.' },
+  { label: 'About', href: '/about', note: 'Who we are and what the group does.' },
+];
+
+/* Beds of the section, youngest first. The gap sits where a bed is missing.
+   Uneven thicknesses on purpose: a column of equal bands reads as a chart
+   rather than as a section. */
+const above = [
+  { fill: 'var(--rule-warm)', h: 30 },
+  { fill: 'var(--bg-card)', h: 20 },
+  { fill: 'var(--rule)', h: 26 },
+];
+const below = [
+  { fill: 'var(--bg-card)', h: 24 },
+  { fill: 'var(--rule-warm)', h: 36 },
+  { fill: 'var(--rule)', h: 18 },
+  { fill: 'var(--bg-card)', h: 28 },
+];
+---
+
+<SocietyLayout
+  title="Page not found"
+  description="This page is not part of the ESPG site. The section below lists where to go instead."
+>
+  <PageHeader
+    eyebrow="Error 404"
+    title="A hiatus in the record."
+    lede="Nothing was preserved at this address. Either the page was never deposited, or it has been eroded away since you last saw the link. The contact below is sharp, so the easiest way on is to pick a horizon that is still there."
+  />
+
+  <div class="gap-grid">
+    <figure class="section" aria-labelledby="section-caption">
+      <div class="column">
+        {above.map((bed) => (
+          <div class="bed" style={`height:${bed.h}px;background:${bed.fill}`}></div>
+        ))}
+
+        <div class="hiatus" role="presentation">
+          <svg class="contact" viewBox="0 0 240 10" preserveAspectRatio="none" aria-hidden="true">
+            <path
+              d="M0 7 Q 10 1, 20 6 T 40 6 T 60 5 Q 70 9, 80 5 T 100 6 T 120 4
+                 Q 130 9, 140 5 T 160 6 T 180 5 Q 190 1, 200 6 T 220 6 T 240 5"
+              fill="none"
+              stroke="var(--copper)"
+              stroke-width="1.6"
+              vector-effect="non-scaling-stroke"
+            />
+          </svg>
+          <span class="hiatus-label">404 · not preserved</span>
+          <svg class="contact contact--lower" viewBox="0 0 240 10" preserveAspectRatio="none" aria-hidden="true">
+            <path
+              d="M0 4 Q 12 8, 24 4 T 48 5 T 72 4 Q 84 9, 96 5 T 120 4 T 144 5
+                 Q 156 1, 168 5 T 192 4 T 216 5 T 240 4"
+              fill="none"
+              stroke="var(--copper)"
+              stroke-width="1.6"
+              vector-effect="non-scaling-stroke"
+            />
+          </svg>
+        </div>
+
+        {below.map((bed) => (
+          <div class="bed" style={`height:${bed.h}px;background:${bed.fill}`}></div>
+        ))}
+      </div>
+
+      <figcaption id="section-caption">
+        Measured section through the site. The requested page would lie in the
+        interval between the two contacts.
+      </figcaption>
+    </figure>
+
+    <div class="where">
+      <p class="sect-tag">Requested path</p>
+      <p class="path"><code id="requested-path">this address</code></p>
+
+      <p class="sect-tag">Where to go instead</p>
+      <ul class="dest">
+        {destinations.map((d) => (
+          <li>
+            <a href={url(d.href)}>{d.label}</a>
+            <span class="note">{d.note}</span>
+          </li>
+        ))}
+      </ul>
+
+      <p class="actions">
+        <a class="cta" href={url('/')}>Back to the surface <span class="arrow">&rarr;</span></a>
+      </p>
+
+      <p class="muted small">
+        If you followed a link from elsewhere on this site, the link is the thing
+        at fault rather than you. Tell the committee and it will be corrected.
+      </p>
+    </div>
+  </div>
+</SocietyLayout>
+
+<script>
+  // Show the path that was asked for. textContent, never innerHTML: the path
+  // comes from the address bar, so anyone can put markup in it, and a 404 page
+  // that writes it back as HTML is a cross-site scripting hole.
+  const slot = document.getElementById('requested-path');
+  if (slot) {
+    const asked = window.location.pathname + window.location.search;
+    if (asked && asked !== '/') slot.textContent = asked;
+  }
+</script>
+
+<style>
+  .gap-grid {
+    display: grid;
+    grid-template-columns: minmax(14rem, 22rem) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  /* ── The section ───────────────────────────────────────── */
+  .section {
+    margin: 0;
+  }
+  .column {
+    border: 1px solid var(--rule-warm);
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--bg-warm);
+  }
+  .bed {
+    border-bottom: 1px solid var(--rule-warm);
+  }
+  .bed:last-child {
+    border-bottom: none;
+  }
+
+  /* The hiatus: hatched ground between two erosional contacts. */
+  .hiatus {
+    position: relative;
+    height: clamp(5.5rem, 12vw, 7.5rem);
+    display: grid;
+    place-items: center;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent 0 7px,
+      rgba(200, 74, 37, 0.14) 7px 8px
+    );
+  }
+  .contact {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+  }
+  .contact--lower {
+    top: auto;
+    bottom: -1px;
+  }
+  .hiatus-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--copper-soft);
+    background: var(--bg);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--rule-warm);
+  }
+
+  figcaption {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--bone-soft);
+    max-width: 34ch;
+  }
+
+  /* ── Where to go ───────────────────────────────────────── */
+  /* min-width: 0 so a long requested path cannot push the grid wider than
+     the page: a grid item's default minimum is its content. */
+  .where {
+    min-width: 0;
+  }
+  .path {
+    font-family: var(--font-mono);
+    margin-bottom: clamp(1.6rem, 3vw, 2.2rem);
+  }
+  .path code {
+    font-size: 0.95rem;
+    word-break: break-all;
+    color: var(--bone);
+    background: var(--bg-card);
+    border: 1px solid var(--rule-warm);
+    padding: 0.35rem 0.6rem;
+  }
+
+  .dest {
+    list-style: none;
+    margin: 0 0 clamp(1.8rem, 3vw, 2.4rem);
+    padding: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .dest li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .dest a {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 24, 'wdth' 100, 'wght' 500;
+    font-size: 1.1rem;
+    letter-spacing: -0.005em;
+  }
+  .dest .note {
+    color: var(--bone-soft);
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    margin-bottom: clamp(1.4rem, 3vw, 2rem);
+  }
+  .small {
+    font-size: 0.88rem;
+    max-width: 46ch;
+  }
+
+  @media (max-width: 760px) {
+    .gap-grid {
+      grid-template-columns: 1fr;
+    }
+    .section {
+      max-width: 22rem;
+    }
+  }
+</style>
