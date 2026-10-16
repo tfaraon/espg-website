@@ -55,13 +55,15 @@ const grids = days.map((day) => {
   // Moments when both rooms change over at once: a good time to switch rooms.
   const r1 = new Set(cells.filter((c) => c.cols[0] <= 3 && c.cols[1] >= 4).map((c) => c.s));
   const r2 = new Set(cells.filter((c) => c.cols[1] === 5).map((c) => c.s));
+  // A shared item (keynote, break) starting in both rooms isn't a moment to switch rooms.
+  const shared = new Set(cells.filter((c) => c.cols[0] <= 3 && c.cols[1] === 5).map((c) => c.s));
   const marks = [];
   for (let m = Math.ceil(start / 15) * 15; m < end; m += 15) marks.push(m);
   return {
     day,
     rows: (end - start) / STEP,
     marks: marks.map((m) => ({ label: fmt(m), row: row(m) })),
-    syncs: [...r1].filter((m) => r2.has(m) && m !== start).map(row),
+    syncs: [...r1].filter((m) => r2.has(m) && !shared.has(m) && m !== start).map(row),
     cells: cells.map((c) => ({ ...c, style: `grid-column: ${c.cols[0]} / ${c.cols[1]}; grid-row: ${row(c.s)} / ${row(c.e)};` })),
   };
 });
@@ -115,7 +117,7 @@ const grids = days.map((day) => {
                   <div class="tick" style={`grid-column: 1 / -1; grid-row: ${m.row} / ${m.row + 1};`} />
                 ))}
                 {g.syncs.map((r) => (
-                  <div class="tick sync" style={`grid-column: 2 / -1; grid-row: ${r} / ${r + 1};`} />
+                  <div class="tick sync" style={`grid-column: 3 / -1; grid-row: ${r} / ${r + 1};`} />
                 ))}
                 {g.marks.map((m) => (
                   <div class="tlabel" style={`grid-column: 1 / 2; grid-row: ${m.row} / ${m.row + 3};`}>{m.label}</div>
