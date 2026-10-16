@@ -3,10 +3,21 @@ import { getCollection } from 'astro:content';
 import ConferenceLayout from '../../../layouts/ConferenceLayout.astro';
 import { url } from '../../../lib/url';
 
-const abstracts = (await getCollection('abstracts')).sort((a, b) =>
-  a.data.presenter.localeCompare(b.data.presenter),
-);
+// Slots read like "Day 1 (Thu 5 Nov) · 11:30–11:45 · Room 1", so sorting the text puts talks in running order.
+// Abstracts without a slot fall back to presenter order at the end.
+const bySlot = (a: { data: { slot?: string; presenter: string } }, b: { data: { slot?: string; presenter: string } }) =>
+  (a.data.slot ?? '￿').localeCompare(b.data.slot ?? '￿') || a.data.presenter.localeCompare(b.data.presenter);
+const abstracts = (await getCollection('abstracts')).sort(bySlot);
+// Sessions appear in the order of their first talk.
 const sessions = [...new Set(abstracts.map((a) => a.data.session).filter(Boolean))] as string[];
+
+// Session blurbs live on the matching session headers in agenda.yml (a split session has one per part).
+const headers = (await getCollection('agenda')).filter((i) => i.data.type === 'session-header');
+const blurb = (session: string) =>
+  headers
+    .filter((h) => h.data.title.startsWith(session) && h.data.description)
+    .map((h) => h.data.description)
+    .join(' ');
 ---
 
 <ConferenceLayout
@@ -24,6 +35,7 @@ const sessions = [...new Set(abstracts.map((a) => a.data.session).filter(Boolean
       sessions.map((s) => (
         <section>
           <h2>{s}</h2>
+          {blurb(s) && <p class="blurb">{blurb(s)}</p>}
           <ul class="abstract-list">
             {abstracts
               .filter((a) => a.data.session === s)
@@ -56,6 +68,11 @@ const sessions = [...new Set(abstracts.map((a) => a.data.session).filter(Boolean
 </ConferenceLayout>
 
 <style>
+  .blurb {
+    max-width: 46rem;
+    color: var(--ink-soft);
+    margin: 0.25rem 0 0;
+  }
   .abstract-list {
     list-style: none;
     padding: 0;

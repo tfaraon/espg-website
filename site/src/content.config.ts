@@ -65,11 +65,15 @@ const agenda = defineCollection({
   schema: z.object({
     day: z.string(),
     time: z.string(),
+    /** Optional end time ("HH:MM"); shown as a range on the program page. */
+    end: z.string().optional(),
     title: z.string(),
     presenter: z.string().optional(),
     room: z.string().optional(),
-    type: z.enum(['session-header', 'keynote', 'talk', 'break', 'lunch', 'social']),
+    type: z.enum(['session-header', 'keynote', 'talk', 'break', 'lunch', 'social', 'plenary']),
     abstract: z.string().optional(),
+    /** Short blurb shown under a session header (and above that session on the abstracts page). */
+    description: z.string().optional(),
   }),
 });
 
