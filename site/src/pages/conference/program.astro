@@ -94,11 +94,11 @@ const grids = days.map((day) => {
       <div class="empty"><p>The program is being finalised now that abstract submissions have closed, and will appear here soon.</p></div>
     ) : (
       <div class="views">
-      {/* Two views switched with :target, so links like /conference/program#rooms open the grid directly. */}
+      {/* Two views switched with :target: the grid is the default, /conference/program#list opens the Room 1 list. */}
       <section id="rooms" class="view">
         <nav class="tabs" aria-label="Program view">
-          <a href="#list">Room 1 list</a>
           <a href="#rooms" aria-current="page">Both rooms side by side</a>
+          <a href="#list">Room 1 list</a>
         </nav>
         <p class="note">
           Room 1 is VUEESC; Room 2 streams GESSS Nationwide. A heavier line marks the moments both rooms change
@@ -152,8 +152,8 @@ const grids = days.map((day) => {
 
       <section id="list" class="view">
       <nav class="tabs" aria-label="Program view">
-        <a href="#list" aria-current="page">Room 1 list</a>
         <a href="#rooms">Both rooms side by side</a>
+        <a href="#list" aria-current="page">Room 1 list</a>
       </nav>
       {days.map((day) => (
         <section class="day">
@@ -254,10 +254,10 @@ const grids = days.map((day) => {
     margin: 0 0 2.5rem;
   }
   .intro a { display: inline-block; margin-top: 0.5rem; }
-  /* ---- view switch: the list shows by default, #rooms swaps in the side-by-side grid ---- */
-  #rooms { display: none; }
-  #rooms:target { display: block; }
-  #rooms:target ~ #list { display: none; }
+  /* ---- view switch: the side-by-side grid shows by default, #list swaps in the Room 1 list ---- */
+  #list { display: none; }
+  #list:target { display: block; }
+  .views:has(#list:target) #rooms { display: none; }
   .tabs {
     display: flex;
     flex-wrap: wrap;
