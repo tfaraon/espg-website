@@ -304,6 +304,7 @@
   end: '11:15'
   title: Morning tea
   type: break
+  room: Room 1
 - id: d2-038-gesss-nationwide-live-stream
   day: Day 2 — Friday 6 November
   time: '11:00'
@@ -572,3 +573,398 @@
   title: VUEESC closing and prizes
   type: plenary
   room: Room 1
+- id: d1-070-how-basic-can-you-get-constraining-secon
+  day: Day 1 — Thursday 5 November
+  time: '11:30'
+  end: '11:40'
+  title: How basic can you get? Constraining secondary precipitation during Ocean Alkalinity Enhancement.
+  type: talk
+  presenter: Alex Molyneux (Canberra, ACT)
+  room: Room 2
+- id: d1-071-late-quaternary-records-of-environmental
+  day: Day 1 — Thursday 5 November
+  time: '11:40'
+  end: '11:50'
+  title: Late Quaternary Records of Environmental Change from the Central Queensland Coast and Southern Great Barrier Reef
+  type: talk
+  presenter: Zara Smith (Brisbane, QLD)
+  room: Room 2
+- id: d1-072-mafic-magma-recharge-driving-the-taal-19
+  day: Day 1 — Thursday 5 November
+  time: '11:50'
+  end: '12:00'
+  title: Mafic magma recharge driving the Taal 1965-1969 eruption recorded in clinopyroxene crystals
+  type: talk
+  presenter: Valerie Shayne Olfindo (Brisbane, QLD)
+  room: Room 2
+- id: d1-073-how-hot-was-the-archaean-mantle-thermody
+  day: Day 1 — Thursday 5 November
+  time: '12:00'
+  end: '12:10'
+  title: How hot was the Archaean mantle? Thermodynamically self-consistent benchmarks from modern basalts
+  type: talk
+  presenter: Shubhadeep Roy (Brisbane, QLD)
+  room: Room 2
+- id: d1-074-revealing-the-cranial-anatomy-of-the-wes
+  day: Day 1 — Thursday 5 November
+  time: '12:10'
+  end: '12:20'
+  title: Revealing the cranial anatomy of the Western Australian Triassic rhytidosteid temnospondyl Deltasaurus pustulatus (Stereospondyli, Trematosauria) via synchrotron scanning.
+  type: talk
+  presenter: Blake Forrest (Armidale, NSW)
+  room: Room 2
+- id: d1-075-multi-proxy-chronostratigraphy-of-the-ca
+  day: Day 1 — Thursday 5 November
+  time: '12:20'
+  end: '12:30'
+  title: Multi-proxy chronostratigraphy of the Cambrian (Miaolingian–Furongian) Arthur Creek Formation near Boulia, western Queensland
+  type: talk
+  presenter: Henry Edward Calvert Grant (Armidale, NSW)
+  room: Room 2
+- id: d1-076-a-diapsid-braincase-from-the-late-cretac
+  day: Day 1 — Thursday 5 November
+  time: '12:30'
+  end: '12:40'
+  title: A diapsid braincase from the Late Cretaceous of Central Queensland
+  type: talk
+  presenter: Ethan Downie (Armidale, NSW)
+  room: Room 2
+- id: d1-077-on-the-biogeographic-conundrum-that-is-s
+  day: Day 1 — Thursday 5 November
+  time: '12:40'
+  end: '12:50'
+  title: On the Biogeographic Conundrum that is Serendipaceratops
+  type: talk
+  presenter: Josh Gardiner (Armidale, NSW)
+  room: Room 2
+- id: d1-078-understanding-hydrogen-and-helium-system
+  day: Day 1 — Thursday 5 November
+  time: '12:50'
+  end: '13:00'
+  title: 'Understanding hydrogen and helium systems on the Eyre Peninsula, South Australia: what can the water tell us?'
+  type: talk
+  presenter: Ian Rogers (Perth, WA)
+  room: Room 2
+- id: d1-079-a-multi-billion-year-crustal-record-from
+  day: Day 1 — Thursday 5 November
+  time: '13:45'
+  end: '13:55'
+  title: A multi-billion year crustal record from the northwestern margin of the West African Craton
+  type: talk
+  presenter: Matthew Zhang (Xiaodong) (Perth, WA)
+  room: Room 2
+- id: d1-080-from-alcheringa-to-beyond
+  day: Day 1 — Thursday 5 November
+  time: '13:55'
+  end: '14:05'
+  title: From Alcheringa to beyond
+  type: talk
+  presenter: Heidi Jane Allen (Perth, WA)
+  room: Room 2
+- id: d1-081-upper-cretaceous-pliosaurid-teeth-from-w
+  day: Day 1 — Thursday 5 November
+  time: '14:05'
+  end: '14:15'
+  title: Upper Cretaceous pliosaurid teeth from Western Australia
+  type: talk
+  presenter: Rhys Meyerkort (Perth, WA)
+  room: Room 2
+- id: d1-082-microbial-sulfur-redox-cycling-controls-
+  day: Day 1 — Thursday 5 November
+  time: '14:15'
+  end: '14:25'
+  title: Microbial sulfur redox cycling controls barite–calcite–pyrite permineralisation of three-dimensionally preserved ichthyosaur bones in a carbonate concretion
+  type: talk
+  presenter: Andrew Ji Yao Jian (Perth, WA)
+  room: Room 2
+- id: d1-083-geological-palaeoenvironmental-and-palae
+  day: Day 1 — Thursday 5 November
+  time: '14:25'
+  end: '14:35'
+  title: Geological, palaeoenvironmental and palaeontological constraints on the fossil record of Meiolania platyceps on Lord Howe Island (Pleistocene, Pacific Ocean)
+  type: talk
+  presenter: Morgane L. Perret Lévesque (Perth, WA)
+  room: Room 2
+- id: d1-084-quantifying-shape-of-albian-dimitobelid-
+  day: Day 1 — Thursday 5 November
+  time: '14:35'
+  end: '14:45'
+  title: Quantifying shape of Albian dimitobelid belemnites from the Gearle Siltstone, Western Australia, reveals microevolution across two species.
+  type: talk
+  presenter: Helen Ryan (Perth, WA)
+  room: Room 2
+- id: d1-085-the-largest-stereospondyl-so-far-from-th
+  day: Day 1 — Thursday 5 November
+  time: '14:45'
+  end: '14:55'
+  title: The Largest Stereospondyl (so far) from the Late Triassic Arcadia Formation (Bowen Basin) of Southeast Queensland
+  type: talk
+  presenter: Ashlea Turner (Townsville, QLD)
+  room: Room 2
+- id: d1-086-what-drives-the-transition-from-wide-to-
+  day: Day 1 — Thursday 5 November
+  time: '14:55'
+  end: '15:05'
+  title: What drives the transition from wide to narrow continental rifting?
+  type: talk
+  presenter: Tabitha Colborne (Townsville, QLD)
+  room: Room 2
+- id: d1-087-optical-microscopy-for-identifying-defor
+  day: Day 1 — Thursday 5 November
+  time: '15:05'
+  end: '15:15'
+  title: Optical microscopy for identifying deformation of sulphides in ore deposit studies
+  type: talk
+  presenter: Elizabeth Marino (Townsville, QLD)
+  room: Room 2
+- id: d1-088-palaeobiology-of-phyllozoon-hanseni-from
+  day: Day 1 — Thursday 5 November
+  time: '16:20'
+  end: '16:30'
+  title: Palaeobiology of Phyllozoon hanseni from the Ediacaran of South Australia
+  type: talk
+  presenter: Xavier James Damiani (Adelaide, SA)
+  room: Room 2
+- id: d1-089-the-rhizodontids-and-tetrapods-tetrapodo
+  day: Day 1 — Thursday 5 November
+  time: '16:30'
+  end: '16:40'
+  title: 'The rhizodontids and tetrapods (Tetrapodomorpha, Sarcopterygii) from the Drummond Basin, Queensland: International significance for stem tetrapod evolution.'
+  type: talk
+  presenter: Joshua Batt (Adelaide, SA)
+  room: Room 2
+- id: d1-090-exploring-the-taphonomy-of-the-exception
+  day: Day 1 — Thursday 5 November
+  time: '16:40'
+  end: '16:50'
+  title: Exploring the taphonomy of the exceptionally preserved arthropod fossils from the Gogo Formation
+  type: talk
+  presenter: Thomas Turner (Adelaide, SA)
+  room: Room 2
+- id: d1-091-the-skillogalee-dolomite-in-a-changing-n
+  day: Day 1 — Thursday 5 November
+  time: '16:50'
+  end: '17:00'
+  title: 'The Skillogalee Dolomite in a changing Neoproterozoic world: a case study from the northern Mt Lofty Ranges'
+  type: talk
+  presenter: Darius Boast (Adelaide, SA)
+  room: Room 2
+- id: d1-092-dating-multi-generation-hydrothermal-bri
+  day: Day 1 — Thursday 5 November
+  time: '17:00'
+  end: '17:10'
+  title: Dating multi-generation hydrothermal/brine fluid flows via in-situ Rb-Sr in the Mt Lyndhurst Diapir, Northern Flinders Ranges, South Australia.
+  type: talk
+  presenter: Mariella Greenaway (Adelaide, SA)
+  room: Room 2
+- id: d1-093-sulfides-as-tracers-of-critical-metals-a
+  day: Day 1 — Thursday 5 November
+  time: '17:10'
+  end: '17:20'
+  title: 'Sulfides as tracers of critical metals and ore evolution: a case study from the Mount Colin ISCG deposit, Cloncurry Province.'
+  type: talk
+  presenter: Gabriel Cellier (Townsville, QLD)
+  room: Room 2
+- id: d1-094-refining-tephrostratigraphic-correlation
+  day: Day 1 — Thursday 5 November
+  time: '17:20'
+  end: '17:30'
+  title: Refining Tephrostratigraphic Correlation Methods Using Zircon Geochemistry and Hosted Melt Inclusions Compositions from Taupō Volcanic Zone deposits.
+  type: talk
+  presenter: Sebastian Jurado Hernandez (Townsville, QLD)
+  room: Room 2
+- id: d1-095-gesss-afternoon-break
+  day: Day 1 — Thursday 5 November
+  time: '15:15'
+  end: '15:30'
+  title: GESSS afternoon break
+  type: break
+  room: Room 2
+- id: d1-096-gesss-day-1-closing-remarks
+  day: Day 1 — Thursday 5 November
+  time: '17:30'
+  end: '17:40'
+  title: GESSS Day 1 closing remarks
+  type: plenary
+  room: Room 2
+- id: d2-097-gesss-nationwide-opening
+  day: Day 2 — Friday 6 November
+  time: '11:00'
+  end: '11:10'
+  title: GESSS Nationwide opening
+  type: plenary
+  room: Room 2
+- id: d2-098-early-earth-microbialites-and-clues-to-e
+  day: Day 2 — Friday 6 November
+  time: '11:10'
+  end: '11:20'
+  title: Early earth Microbialites and clues to evolution of complex life
+  type: talk
+  presenter: Sailakshmi Cholanilath (Sydney, NSW)
+  room: Room 2
+- id: d2-099-reconstructing-dinosaur-diets-in-ancient
+  day: Day 2 — Friday 6 November
+  time: '11:20'
+  end: '11:30'
+  title: Reconstructing dinosaur diets in ancient ecosystems using multi-proxy tools
+  type: talk
+  presenter: Christopher D. Vournazos (Sydney, NSW)
+  room: Room 2
+- id: d2-100-linking-stratigraphic-forward-modelling-
+  day: Day 2 — Friday 6 November
+  time: '11:30'
+  end: '11:40'
+  title: 'Linking Stratigraphic Forward Modelling to Hydrogen Mobility: Implications for Underground Hydrogen Storage in a Data-Limited Passive Margin'
+  type: talk
+  presenter: Rafael Cherene (Sydney, NSW)
+  room: Room 2
+- id: d2-101-investigating-mine-based-geothermal-ener
+  day: Day 2 — Friday 6 November
+  time: '11:40'
+  end: '11:50'
+  title: 'Investigating Mine-Based Geothermal Energy Potential in the Sydney Basin, Australia: A Geospatial Framework.'
+  type: talk
+  presenter: Chamini Sandunika Waravita (Sydney, NSW)
+  room: Room 2
+- id: d2-102-from-rocks-to-geophysics-petrophysical-p
+  day: Day 2 — Friday 6 November
+  time: '11:50'
+  end: '12:00'
+  title: 'From rocks to geophysics: petrophysical properties of mantle xenoliths from Mount Wiridgil, southeast Australia'
+  type: talk
+  presenter: Puqing Li (Sydney, NSW)
+  room: Room 2
+- id: d2-103-riftplume-interaction-and-microplate-evo
+  day: Day 2 — Friday 6 November
+  time: '12:00'
+  end: '12:10'
+  title: 'Rift–Plume Interaction and Microplate Evolution in the South Atlantic: The Rio Grande Rise–Valdivia Bank System'
+  type: talk
+  presenter: Caesar Augusto Rigoti (Sydney, NSW)
+  room: Room 2
+- id: d2-104-investigating-granulite-facies-metamorph
+  day: Day 2 — Friday 6 November
+  time: '12:10'
+  end: '12:20'
+  title: Investigating Granulite Facies Metamorphism in Paleoproterozoic Rifted Basins, with examples from Broken Hill, New South Wales
+  type: talk
+  presenter: Penelope Beltran-Rehberg (Sydney, NSW)
+  room: Room 2
+- id: d2-105-deciphering-crypitc-rare-earth-element-e
+  day: Day 2 — Friday 6 November
+  time: '12:20'
+  end: '12:30'
+  title: Deciphering crypitc rare earth element enrichment in the skarn regolith at Doradilla.
+  type: talk
+  presenter: Rory Carter (Sydney, NSW)
+  room: Room 2
+- id: d2-106-the-garnet-factory-a-hree-reservoir
+  day: Day 2 — Friday 6 November
+  time: '12:30'
+  end: '12:40'
+  title: 'The Garnet Factory: A HREE Reservoir'
+  type: talk
+  presenter: Michael Fakes (Adelaide, SA)
+  room: Room 2
+- id: d2-107-enigmatic-origins-of-the-rarest-most-eco
+  day: Day 2 — Friday 6 November
+  time: '12:40'
+  end: '12:50'
+  title: 'Enigmatic origins of the rarest, most economic magmas on the planet: the aillikite-carbonatite connection in central Australia’s newly discovered Nb-REE alkaline province'
+  type: talk
+  presenter: Holly Cooke (Adelaide, SA)
+  room: Room 2
+- id: d2-108-carbonatite-melt-pathways-connect-the-de
+  day: Day 2 — Friday 6 November
+  time: '12:50'
+  end: '13:00'
+  title: Carbonatite melt pathways connect the deep mantle to Archean craton margins.
+  type: talk
+  presenter: David Baker (Adelaide, SA)
+  room: Room 2
+- id: d2-109-reconstructing-holocene-fire-history-on-
+  day: Day 2 — Friday 6 November
+  time: '13:45'
+  end: '13:55'
+  title: 'Reconstructing Holocene fire history on Kangaroo Island: a biomarker-led multiproxy approach.'
+  type: talk
+  presenter: Evandro Augusto de Souza Magalhaes (Adelaide, SA)
+  room: Room 2
+- id: d2-110-inferring-climate-change-in-south-west-w
+  day: Day 2 — Friday 6 November
+  time: '13:55'
+  end: '14:05'
+  title: Inferring climate change in south-west Western Australia using diatoms from Boat Harbour Lagoon and the subsequent ecological response through sedimentary ancient DNA
+  type: talk
+  presenter: Teye Frederik Nicolaas Aukes (Adelaide, SA)
+  room: Room 2
+- id: d2-111-walking-worms-part-describing-the-first-
+  day: Day 2 — Friday 6 November
+  time: '14:05'
+  end: '14:15'
+  title: 'Walking “Worms” Part: Describing the First Occurences of the Cambrian Armoured Lobopodian Quadratapora from South Australia and Kazakhstan'
+  type: talk
+  presenter: Eleanor V. Y. Beidatsch (Albany, WA)
+  room: Room 2
+- id: d2-112-eocene-coral-sea-tectonics-constraints-f
+  day: Day 2 — Friday 6 November
+  time: '16:20'
+  end: '16:30'
+  title: Eocene Coral Sea Tectonics - Constraints from the Mellish Rise, Louisiade Plateau, and Louisiade Trough
+  type: talk
+  presenter: Will Sinclair (Hobart, Tasmania)
+  room: Room 2
+- id: d2-113-beyond-rounding-pumice-shape-evolution-a
+  day: Day 2 — Friday 6 November
+  time: '16:30'
+  end: '16:40'
+  title: 'Beyond rounding: Pumice Shape Evolution and Ash Production in Subaqueous Environment'
+  type: talk
+  presenter: Maelys Moulin (Hobart, Tasmania)
+  room: Room 2
+- id: d2-114-geochronological-constraints-for-tasmani
+  day: Day 2 — Friday 6 November
+  time: '16:40'
+  end: '16:50'
+  title: Geochronological Constraints for Tasmanian Stratigraphy and Snowball Earth Events
+  type: talk
+  presenter: Kaitlyn Ainscow (Hobart, Tasmania)
+  room: Room 2
+- id: d2-115-a-not-so-ordinary-chondrite
+  day: Day 2 — Friday 6 November
+  time: '16:50'
+  end: '17:00'
+  title: A Not So Ordinary Chondrite
+  type: talk
+  presenter: Gabrielle Kaye O'Toole (Hobart, Tasmania)
+  room: Room 2
+- id: d2-116-parameterizing-lunar-seismic-scattering
+  day: Day 2 — Friday 6 November
+  time: '17:00'
+  end: '17:10'
+  title: Parameterizing Lunar Seismic Scattering
+  type: talk
+  presenter: Turki Moaaf (Canberra, ACT)
+  room: Room 2
+- id: d2-117-an-appetite-for-apatite-investigating-ap
+  day: Day 2 — Friday 6 November
+  time: '17:10'
+  end: '17:20'
+  title: 'An appetite for apatite: Investigating apatite geochemistry as an exploration tool for carbonatite rare earth element and niobium deposits'
+  type: talk
+  presenter: Katya Orlova (Canberra, ACT)
+  room: Room 2
+- id: d2-118-room-2-free-the-melbourne-hub-talks-are-
+  day: Day 2 — Friday 6 November
+  time: '14:15'
+  end: '15:15'
+  title: 'Room 2 free: the Melbourne hub talks are in Room 1'
+  type: break
+  room: Room 2
+- id: d2-119-gesss-afternoon-break
+  day: Day 2 — Friday 6 November
+  time: '15:15'
+  end: '15:30'
+  title: GESSS afternoon break
+  type: break
+  room: Room 2

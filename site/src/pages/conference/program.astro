@@ -22,6 +22,49 @@ const typeLabel: Record<string, string> = {
   social: 'Social',
   plenary: 'Plenary',
 };
+
+// Room 1 list: individual GESSS stream talks (Room 2) only appear in the side-by-side view.
+const inList = (i: (typeof items)[number]) => !(i.data.room === 'Room 2' && i.data.type !== 'session-header');
+
+// Side-by-side view: one CSS grid per day, one row per 5 minutes.
+// Columns: 1 time · 2 session · 3 Room 1 (VUEESC) · 4 Room 2 (GESSS stream); grid lines 1–5.
+const STEP = 5;
+const toMin = (t: string) => {
+  const [h, m] = t.split(':').map(Number);
+  return h * 60 + m;
+};
+const fmt = (m: number) => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
+const columnsFor = (i: (typeof items)[number]): [number, number] => {
+  const { type, room } = i.data;
+  if (type === 'session-header') return [2, 3];
+  if (room === 'Room 1') return type === 'talk' ? [3, 4] : [2, 4];
+  if (room === 'Room 2') return [4, 5];
+  if (type === 'social') return [2, 4];
+  return [2, 5]; // breaks, lunch and streamed items cover both rooms
+};
+const grids = days.map((day) => {
+  const cells = items
+    .filter((i) => i.data.day === day && !(i.data.type === 'session-header' && i.data.room === 'Room 2'))
+    .map((i) => {
+      const s = toMin(i.data.time);
+      return { item: i, s, e: i.data.end ? toMin(i.data.end) : s + STEP, cols: columnsFor(i) };
+    });
+  const start = Math.min(...cells.map((c) => c.s));
+  const end = Math.max(...cells.map((c) => c.e));
+  const row = (m: number) => (m - start) / STEP + 2; // row 1 is the column header
+  // Moments when both rooms change over at once: a good time to switch rooms.
+  const r1 = new Set(cells.filter((c) => c.cols[0] <= 3 && c.cols[1] >= 4).map((c) => c.s));
+  const r2 = new Set(cells.filter((c) => c.cols[1] === 5).map((c) => c.s));
+  const marks = [];
+  for (let m = Math.ceil(start / 15) * 15; m < end; m += 15) marks.push(m);
+  return {
+    day,
+    rows: (end - start) / STEP,
+    marks: marks.map((m) => ({ label: fmt(m), row: row(m) })),
+    syncs: [...r1].filter((m) => r2.has(m) && m !== start).map(row),
+    cells: cells.map((c) => ({ ...c, style: `grid-column: ${c.cols[0]} / ${c.cols[1]}; grid-row: ${row(c.s)} / ${row(c.e)};` })),
+  };
+});
 ---
 
 <ConferenceLayout
@@ -48,7 +91,69 @@ const typeLabel: Record<string, string> = {
     items.length === 0 ? (
       <div class="empty"><p>The program is being finalised now that abstract submissions have closed, and will appear here soon.</p></div>
     ) : (
-      days.map((day) => (
+      <div class="views">
+      {/* Two views switched with :target, so links like /conference/program#rooms open the grid directly. */}
+      <section id="rooms" class="view">
+        <nav class="tabs" aria-label="Program view">
+          <a href="#list">Room 1 list</a>
+          <a href="#rooms" aria-current="page">Both rooms side by side</a>
+        </nav>
+        <p class="note">
+          Room 1 is VUEESC; Room 2 streams GESSS Nationwide. A heavier line marks the moments both rooms change
+          over together. GESSS times are from the national program and may shift slightly on the day.
+        </p>
+        {grids.map((g) => (
+          <section class="day">
+            <h2>{g.day}</h2>
+            <div class="grid-wrap">
+              <div class="rooms-grid" style={`grid-template-rows: auto repeat(${g.rows}, minmax(0.95rem, auto));`}>
+                <div class="gh" style="grid-column: 1 / 2; grid-row: 1;">Time</div>
+                <div class="gh" style="grid-column: 2 / 3; grid-row: 1;">Session</div>
+                <div class="gh" style="grid-column: 3 / 4; grid-row: 1;">Room 1 · VUEESC</div>
+                <div class="gh gh-2" style="grid-column: 4 / 5; grid-row: 1;">Room 2 · GESSS stream</div>
+                {g.marks.map((m) => (
+                  <div class="tick" style={`grid-column: 1 / -1; grid-row: ${m.row} / ${m.row + 1};`} />
+                ))}
+                {g.syncs.map((r) => (
+                  <div class="tick sync" style={`grid-column: 2 / -1; grid-row: ${r} / ${r + 1};`} />
+                ))}
+                {g.marks.map((m) => (
+                  <div class="tlabel" style={`grid-column: 1 / 2; grid-row: ${m.row} / ${m.row + 3};`}>{m.label}</div>
+                ))}
+                {g.cells.map(({ item: i, style }) => (
+                  <div class={`cell cell-${i.data.type} ${i.data.room === 'Room 2' ? 'room2' : ''}`} style={style}>
+                    {i.data.type === 'session-header' ? (
+                      <strong>{i.data.title}</strong>
+                    ) : i.data.type === 'talk' ? (
+                      <>
+                        <span class="ct">{i.data.time}</span>
+                        <span class="cp">{i.data.presenter}</span>
+                        {i.data.abstract ? (
+                          <a class="cti" href={url(`/conference/abstracts/${i.data.abstract}`)} title={i.data.title}>{i.data.title}</a>
+                        ) : (
+                          <span class="cti" title={i.data.title}>{i.data.title}</span>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        <span class={`badge badge-${i.data.type}`}>{typeLabel[i.data.type]}</span>
+                        <span class="cx">{i.data.title}{i.data.presenter && <span class="cp"> · {i.data.presenter}</span>}</span>
+                      </>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
+      </section>
+
+      <section id="list" class="view">
+      <nav class="tabs" aria-label="Program view">
+        <a href="#list" aria-current="page">Room 1 list</a>
+        <a href="#rooms">Both rooms side by side</a>
+      </nav>
+      {days.map((day) => (
         <section class="day">
           <h2>{day}</h2>
           <div class="table-wrap"><table class="agenda">
@@ -62,7 +167,7 @@ const typeLabel: Record<string, string> = {
             </thead>
             <tbody>
               {items
-                .filter((i) => i.data.day === day)
+                .filter((i) => i.data.day === day && inList(i))
                 .map((i) => (
                   <tr class={`type-${i.data.type}`}>
                     <td class="time">{i.data.end ? `${i.data.time}–${i.data.end}` : i.data.time}</td>
@@ -83,7 +188,9 @@ const typeLabel: Record<string, string> = {
             </tbody>
           </table></div>
         </section>
-      ))
+      ))}
+      </section>
+      </div>
     )
   }
 </ConferenceLayout>
@@ -145,6 +252,88 @@ const typeLabel: Record<string, string> = {
     margin: 0 0 2.5rem;
   }
   .intro a { display: inline-block; margin-top: 0.5rem; }
+  /* ---- view switch: the list shows by default, #rooms swaps in the side-by-side grid ---- */
+  #rooms { display: none; }
+  #rooms:target { display: block; }
+  #rooms:target ~ #list { display: none; }
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.75rem;
+  }
+  .tabs a {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .tabs a[aria-current='page'] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .note { color: var(--ink-soft); font-size: 0.9rem; max-width: 46rem; }
+
+  /* ---- side-by-side grid ---- */
+  .grid-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); }
+  .rooms-grid {
+    display: grid;
+    grid-template-columns: 3.4rem 8.5rem minmax(14rem, 1fr) minmax(14rem, 1fr);
+    min-width: 44rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  .gh {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 0.5rem 0.6rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .gh-2 { background: #7f6000; }
+  .tick { border-top: 1px solid var(--rule); }
+  .tick.sync { border-top: 2px solid var(--ink); z-index: 2; pointer-events: none; }
+  .tlabel {
+    padding: 0.15rem 0.4rem 0;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.72rem;
+  }
+  .cell {
+    position: relative;
+    z-index: 1;
+    margin: 1px 2px;
+    padding: 0.3rem 0.45rem;
+    border-radius: 4px;
+    background: var(--paper);
+    border-left: 3px solid var(--teal);
+    overflow: hidden;
+  }
+  .cell.room2 { border-left-color: #b58a1a; background: #faf6ea; }
+  .cell-session-header {
+    background: var(--paper-2);
+    border-left-color: var(--ink);
+    font-size: 0.74rem;
+  }
+  .cell-break, .cell-lunch, .cell-social { background: #eef0ea; border-left-color: var(--rule); }
+  .cell-keynote { background: rgba(43, 179, 177, 0.12); border-left-color: var(--lime); }
+  .cell-plenary { background: rgba(20, 33, 61, 0.07); border-left-color: var(--ink); }
+  .cell .badge { font-size: 0.6rem; margin-right: 0.35rem; }
+  .ct { color: var(--ink-soft); font-variant-numeric: tabular-nums; margin-right: 0.35rem; }
+  .cp { font-weight: 600; }
+  .cti {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--ink-soft);
+    margin-top: 0.1rem;
+  }
+  a.cti { color: var(--ink); }
   .desc {
     margin: 0.35rem 0 0;
     font-weight: 400;
