@@ -4,7 +4,7 @@ presenter: Natasha Nagle
 affiliation: La Trobe University
 coauthors: []
 session: GESSS Melbourne hub
-slot: Day 2 (Fri 6 Nov) · 14:25–14:35 · Room 1
+slot: Day 2 (Fri 6 Nov) · 14:15–14:25 · Room 1
 ---
 
 The Dead Sea, one of the world’s most unique environments, is shrinking at an alarming rate of over 1m/year, with profound consequences for local ecosystems and communities (Ghazleh et al. 2011). This rapid transformation highlights the sensitivity of the Jordan Valley to hydrological and environmental change, but the relatively short period of direct observation provides only a limited perspective on the range, persistence, and effects of such changes. The Valley’s Pleistocene sedimentary record offers a much longer perspective.

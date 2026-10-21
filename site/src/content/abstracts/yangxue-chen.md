@@ -1,11 +1,11 @@
 ---
 title: Spatial and temporal variability in wave storm characteristics across Port Phillip Bay, Australia
 presenter: Yangxue Chen
-affiliation: The University of Melbourne
+affiliation: University of Melbourne
 coauthors:
 - David M. Kennedy
 session: GESSS Melbourne hub
-slot: Day 2 (Fri 6 Nov) · 14:35–14:45 · Room 1
+slot: Day 2 (Fri 6 Nov) · 14:25–14:35 · Room 1
 ---
 
 Port Phillip Bay is a large, fetch-limited embayment in southeastern Australia, where wave conditions can vary substantially across the bay due to differences in shoreline orientation, local fetch and wind exposure. Wave storm conditions at individual locations may therefore differ considerably, meaning that observations from a single site may not represent storm conditions across the wider bay. Comparing multiple locations provides a more complete understanding of the spatial variability of wave storms within Port Phillip Bay.

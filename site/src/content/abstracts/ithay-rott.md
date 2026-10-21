@@ -4,7 +4,7 @@ presenter: Ithay Rott
 affiliation: Monash University
 coauthors: []
 session: GESSS Melbourne hub
-slot: Day 2 (Fri 6 Nov) · 15:05–15:15 · Room 1
+slot: Day 2 (Fri 6 Nov) · 14:45–14:55 · Room 1
 ---
 
 Orogenic gold deposits make up the largest source of mined gold in history, yet the mechanisms which concentrate gold from its crustal background concentration (\~0.5–5 ppb) to ore-grade deposits (\>10 ppm) remain poorly constrained. According to the metamorphic devolatilisation model, gold and sulfur are released into hydrothermal fluids through the breakdown of pyrite (FeS2) to pyrrhotite (Fe1-xS), a reaction that has previously been confined to the greenschist–amphibolite transition (\~500–550 °C). This has restricted current models of orogenic gold formation to a deep, narrow source region, despite field evidence of pyrrhotite replacing pyrite at shallower, lower-greenschist conditions.
