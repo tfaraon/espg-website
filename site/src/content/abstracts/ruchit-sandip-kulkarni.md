@@ -7,7 +7,7 @@ coauthors:
 - Linden Ashcroft
 - Chiara Holgate
 session: S6 · Weather extremes, prediction and water
-slot: Day 2 (Fri 6 Nov) · 15:15–15:30 · Room 1
+slot: Day 2 (Fri 6 Nov) · 15:20–15:35 · Room 1
 ---
 
 Drought is rarely the product of a single cause: it emerges from the interaction of large-scale atmospheric pressure patterns, lack of moisture transported into the region by winds, and land-surface feedback that reinforces dry conditions once established. In this presentation, I will talk about the atmospheric pressure, moisture, and temperature patterns identified during different stages of meteorological drought such as development, intensification, and recovery, in different parts of the world.
