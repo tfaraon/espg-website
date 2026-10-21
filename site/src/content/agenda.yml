@@ -180,7 +180,7 @@
   title: S3 · Air quality, health and contamination
   type: session-header
   room: Room 1
-  description: 'What we breathe and what gets into our samples: the chemistry behind Melbourne''s ozone, elevated aerosol layers over the city, the weather patterns that trigger thunderstorm asthma, low-cost sensors for checking classroom ventilation, and contamination from PPE and consumables in clean labs.'
+  description: 'What we breathe and what gets into our samples: the chemistry behind Melbourne''s ozone, elevated aerosol layers over the city, the weather patterns that trigger thunderstorm asthma, infection-risk modelling to set room-specific ventilation rates, and contamination from PPE and consumables in clean labs.'
 - id: d1-023-understanding-ozone-formation-in-melbour
   day: Day 1 — Thursday 5 November
   time: '16:20'
@@ -207,11 +207,11 @@
   presenter: John Drugli
   room: Room 1
   abstract: john-drugli
-- id: d1-026-estimating-ventilation-rates-in-a-univer
+- id: d1-026-rethinking-ventilation-rates-through-inf
   day: Day 1 — Thursday 5 November
   time: '17:05'
   end: '17:20'
-  title: Estimating Ventilation Rates in a University Building Using Low-Cost Sensors and Data Science – An Indoor Health Check for Students
+  title: 'Rethinking Ventilation Rates Through Infection-Risk Modelling: A Room-Specific Framework for Healthier Buildings'
   type: talk
   presenter: Salman Khan
   room: Room 1
