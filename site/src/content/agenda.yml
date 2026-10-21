@@ -230,25 +230,25 @@
   time: '17:35'
   title: Trivia night at the Clyde Hotel (from 5:30 pm, sponsored by GSAV)
   type: social
-- id: d2-029-welcome-back
+- id: d2-029-welcome-back-and-morning-coffee
   day: Day 2 — Friday 6 November
   time: '09:00'
-  end: '09:15'
-  title: Welcome back
+  end: '09:30'
+  title: Welcome back and morning coffee
   type: plenary
   room: Room 1
 - id: d2-030-s4-coasts-lakes-and-people
   day: Day 2 — Friday 6 November
-  time: '09:15'
-  end: '10:30'
+  time: '09:30'
+  end: '10:45'
   title: S4 · Coasts, lakes and people
   type: session-header
   room: Room 1
   description: 'Shorelines past and present: maar-lake microbialites as analogues for ancient stromatolites, modelling how Kati Thanda–Lake Eyre fills and dries and the waves that shape its shores, Holocene sea-level change in Narrm (Port Phillip Bay), and shell middens recording seasonal foraging on Gunditjmara Country.'
 - id: d2-031-interpretations-and-implications-of-the-
   day: Day 2 — Friday 6 November
-  time: '09:15'
-  end: '09:30'
+  time: '09:30'
+  end: '09:45'
   title: Interpretations and implications of the textures and  mineralogy of microbialites in Western Victoria
   type: talk
   presenter: Rita Fortune
@@ -256,16 +256,16 @@
   abstract: rita-fortune
 - id: d2-032-a-modeling-perspective-on-hydro-climate-
   day: Day 2 — Friday 6 November
-  time: '09:30'
-  end: '09:45'
+  time: '09:45'
+  end: '10:00'
   title: 'A modeling perspective on hydro-climate variability in dryland lakes: Controls on the rise, persistence and demise of Kati Thanda-Lake Eyre'
   type: talk
   presenter: Ahmed Naceur MAMA
   room: Room 1
 - id: d2-033-process-based-modelling-of-wind-waves-in
   day: Day 2 — Friday 6 November
-  time: '09:45'
-  end: '10:00'
+  time: '10:00'
+  end: '10:15'
   title: 'Process-based modelling of wind waves in a data-scarce lake: Insights from Kati Thanda–Lake Eyre, Australia'
   type: talk
   presenter: Thomas Faraon
@@ -273,8 +273,8 @@
   abstract: thomas-faraon
 - id: d2-034-timing-and-magnitude-of-holocene-relativ
   day: Day 2 — Friday 6 November
-  time: '10:00'
-  end: '10:15'
+  time: '10:15'
+  end: '10:30'
   title: Timing and magnitude of Holocene relative sea-level and coastal changes on the southern coast of Australia.
   type: talk
   presenter: Sophie Golding Chan
@@ -282,8 +282,8 @@
   abstract: sophie-golding-chan
 - id: d2-035-reconstructing-holocene-environments-and
   day: Day 2 — Friday 6 November
-  time: '10:15'
-  end: '10:30'
+  time: '10:30'
+  end: '10:45'
   title: Reconstructing Holocene Environments and Seasonal Foraging Practices through Mollusc Shell Sclerochronology in Western Victoria, Australia
   type: talk
   presenter: Tehreem Raza
@@ -291,7 +291,7 @@
   abstract: tehreem-raza
 - id: d2-036-morning-tea
   day: Day 2 — Friday 6 November
-  time: '10:30'
+  time: '10:45'
   end: '11:15'
   title: Morning tea
   type: break

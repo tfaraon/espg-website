@@ -18,7 +18,7 @@ coauthors:
 - Timothy J. Cohen
 - Mathieu Schuster
 session: S4 · Coasts, lakes and people
-slot: Day 2 (Fri 6 Nov) · 09:45–10:00 · Room 1
+slot: Day 2 (Fri 6 Nov) · 10:00–10:15 · Room 1
 ---
 
 Coastal landforms occur along the margins of many shallow lakes, including lakes in arid regions. Their morphology may preserve evidence of past water levels and wave conditions, but interpreting that evidence is difficult where direct observations are sparse or the conditions under which landforms formed no longer exist. Kati Thanda–Lake Eyre, an ephemeral lake in central Australia, provides an opportunity to investigate these relationships across a range of inundation states.
