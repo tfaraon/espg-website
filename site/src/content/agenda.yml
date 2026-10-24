@@ -99,12 +99,14 @@
   presenter: Rhiannon Ferdinando
   room: Room 1
   abstract: rhiannon-ferdinando
-- id: d1-013-lunch
+- id: d1-013-lunch-and-poster-the-petrology-and-geoch
   day: Day 1 — Thursday 5 November
   time: '13:00'
   end: '13:45'
-  title: Lunch
+  title: 'Lunch and poster: The Petrology and Geochemistry of Finnish Carbonatites'
   type: lunch
+  presenter: Jacob Wilson
+  abstract: jacob-wilson
 - id: d1-014-vueesc-keynote
   day: Day 1 — Thursday 5 November
   time: '13:45'
@@ -166,14 +168,12 @@
   presenter: Hugo Gouilloux
   room: Room 1
   abstract: hugo-gouilloux
-- id: d1-021-afternoon-tea-and-poster-the-petrology-a
+- id: d1-021-afternoon-tea
   day: Day 1 — Thursday 5 November
   time: '15:45'
   end: '16:00'
-  title: 'Afternoon tea and poster: The Petrology and Geochemistry of Finnish Carbonatites'
+  title: Afternoon tea
   type: break
-  presenter: Jacob Wilson
-  abstract: jacob-wilson
 - id: d1-022-gesss-keynote-toward-a-four-dimensional-
   day: Day 1 — Thursday 5 November
   time: '16:00'
