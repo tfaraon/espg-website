@@ -4,6 +4,8 @@ presenter: Yangxue Chen
 affiliation: University of Melbourne
 coauthors:
 - David M. Kennedy
+- Juliet Sefton
+- Runjie Yuan
 session: GESSS Melbourne hub
 slot: Day 2 (Fri 6 Nov) · 14:25–14:35 · Room 1
 ---

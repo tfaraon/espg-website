@@ -6,7 +6,7 @@ coauthors:
 - Andrew King
 - Linden Ashcroft
 - Chiara Holgate
-session: S6 · Weather extremes, prediction and water
+session: S6 · Weather extremes and water
 slot: Day 2 (Fri 6 Nov) · 15:20–15:35 · Room 1
 ---
 

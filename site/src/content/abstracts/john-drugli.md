@@ -7,7 +7,7 @@ coauthors:
 - Andrew Brown
 - Rob A. Warren
 - Joshua S. Soderholm
-session: S3 · Air quality, health and contamination
+session: S3 · Air quality, weather and health
 slot: Day 1 (Thu 5 Nov) · 16:50–17:05 · Room 1
 ---
 

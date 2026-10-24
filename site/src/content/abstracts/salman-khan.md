@@ -5,7 +5,7 @@ affiliation: The University of Melbourne
 coauthors:
 - Robyn Schofield
 - Jason Monty
-session: S3 · Air quality, health and contamination
+session: S3 · Air quality, weather and health
 slot: Day 1 (Thu 5 Nov) · 17:05–17:20 · Room 1
 ---
 
