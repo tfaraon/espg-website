@@ -5,7 +5,7 @@ affiliation: Monash University
 coauthors:
 - Xuan Zhu
 - Lan Du
-session: S6 · Weather extremes, prediction and water
+session: S6 · Weather extremes and water
 slot: Day 2 (Fri 6 Nov) · 12:45–13:00 · Room 1
 ---
 

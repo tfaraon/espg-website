@@ -5,7 +5,7 @@ affiliation: The University of Melbourne
 coauthors:
 - Yi Huang
 - Qinggang Gao
-session: S6 · Weather extremes, prediction and water
+session: S6 · Weather extremes and water
 slot: Day 2 (Fri 6 Nov) · 12:30–12:45 · Room 1
 ---
 

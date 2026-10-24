@@ -3,7 +3,7 @@ title: 'Spatial Distribution of Water Demand for Domestic Use in a Disaster-Pron
 presenter: Afifudin
 affiliation: The University of Melbourne
 coauthors: []
-session: S6 · Weather extremes, prediction and water
+session: S6 · Weather extremes and water
 slot: Day 2 (Fri 6 Nov) · 15:05–15:20 · Room 1
 ---
 

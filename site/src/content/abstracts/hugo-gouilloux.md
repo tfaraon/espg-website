@@ -7,8 +7,8 @@ coauthors:
 - Arisa Nakano
 - Xueying Wang
 - Brandon Mahan
-session: S3 · Air quality, health and contamination
-slot: Day 1 (Thu 5 Nov) · 17:20–17:35 · Room 1
+session: S2 · Mantle, magmas and meteorites
+slot: Day 1 (Thu 5 Nov) · 15:30–15:45 · Room 1
 ---
 
 Clean labs (CLs) cleanliness varies according to specific classification and appropriately to experiment conducted. Regardless of these conditions, samples are still exposed to contamination, often small, but not insignificant. With space exploration and return sample missions, materials brought from extraterrestrial bodies are in limited mass and require strictly curated environment and protocols to ensure relevant studies. While analyses tend to target small samples, their sensitivity to contamination is drastically increased.

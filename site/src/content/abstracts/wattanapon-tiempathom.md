@@ -5,7 +5,7 @@ affiliation: The University of Melbourne
 coauthors:
 - Robert G. Ryan
 - Robyn Schofield
-session: S3 · Air quality, health and contamination
+session: S3 · Air quality, weather and health
 slot: Day 1 (Thu 5 Nov) · 16:35–16:50 · Room 1
 ---
 
