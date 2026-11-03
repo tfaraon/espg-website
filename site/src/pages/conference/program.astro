@@ -125,7 +125,10 @@ const grids = days.map((day) => {
                 {g.cells.map(({ item: i, style }) => (
                   <div class={`cell cell-${i.data.type} ${i.data.room === 'Room 2' ? 'room2' : ''}`} style={style}>
                     {i.data.type === 'session-header' ? (
-                      <strong>{i.data.title}</strong>
+                      <>
+                        <strong>{i.data.title}</strong>
+                        {i.data.presenter && <span class="chair">{i.data.presenter}</span>}
+                      </>
                     ) : i.data.type === 'talk' ? (
                       <>
                         <span class="ct">{i.data.time}</span>
@@ -325,6 +328,7 @@ const grids = days.map((day) => {
   .cell-keynote { background: rgba(43, 179, 177, 0.12); border-left-color: var(--lime); }
   .cell-plenary { background: rgba(20, 33, 61, 0.07); border-left-color: var(--ink); }
   .cell .badge { font-size: 0.6rem; margin-right: 0.35rem; }
+  .chair { display: block; margin-top: 0.3rem; font-weight: 500; color: var(--ink-soft); }
   .ct { color: var(--ink-soft); font-variant-numeric: tabular-nums; margin-right: 0.35rem; }
   .cp { font-weight: 600; }
   .cti {

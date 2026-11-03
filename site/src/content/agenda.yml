@@ -44,6 +44,7 @@
   title: S1 · Crustal fluids, resources and carbon storage
   type: session-header
   room: Room 1
+  presenter: 'Chair: James La Greca'
   description: 'How fluids move through rock and what they leave behind: salty metamorphic fluids and critical-metal ores, structurally focused gold and seafloor sulphide deposits, bacteria that clean up uranium waste while recovering rare earths, and pore-scale flow and legacy-well checks for CO2 storage.'
 - id: d1-007-controls-on-scapolite-genesis-in-salty-o
   day: Day 1 — Thursday 5 November
@@ -99,14 +100,13 @@
   presenter: Rhiannon Ferdinando
   room: Room 1
   abstract: rhiannon-ferdinando
-- id: d1-013-lunch-and-poster-the-petrology-and-geoch
+- id: d1-013-lunch-and-posters
   day: Day 1 — Thursday 5 November
   time: '13:00'
   end: '13:45'
-  title: 'Lunch and poster: The Petrology and Geochemistry of Finnish Carbonatites'
+  title: Lunch and posters
   type: lunch
-  presenter: Jacob Wilson
-  abstract: jacob-wilson
+  presenter: Jacob Wilson, Tehreem Raza
 - id: d1-014-vueesc-keynote
   day: Day 1 — Thursday 5 November
   time: '13:45'
@@ -122,6 +122,7 @@
   title: S2 · Mantle, magmas and meteorites
   type: session-header
   room: Room 1
+  presenter: 'Chair: Tom McNamara'
   description: 'From the deep mantle to outer space: what Finland''s ''Wolf'' kimberlites and rare orbicular kimberlites reveal about mantle melts, new ages and geochemistry for the Turkana Basin tuffs that date the hominin record, micro-CT imaging of meteorites and asteroid samples returned by Hayabusa2 and OSIRIS-REx, and keeping such precious samples free of contamination in clean labs.'
 - id: d1-016-petrogenesis-of-the-diamondiferous-wolf-
   day: Day 1 — Thursday 5 November
@@ -189,6 +190,7 @@
   title: S3 · Air quality, weather and health
   type: session-header
   room: Room 1
+  presenter: 'Chair: Bianca Estrada Figueroa'
   description: 'What we breathe and how we forecast it: the chemistry behind Melbourne''s ozone, elevated aerosol layers over the city, the weather patterns that trigger thunderstorm asthma, infection-risk modelling to set room-specific ventilation rates, and a new ensemble tangent linear model to sharpen the data assimilation behind weather forecasts.'
 - id: d1-024-understanding-ozone-formation-in-melbour
   day: Day 1 — Thursday 5 November
@@ -249,11 +251,12 @@
 - id: d2-031-s4-coasts-lakes-and-people
   day: Day 2 — Friday 6 November
   time: '09:30'
-  end: '10:45'
+  end: '10:30'
   title: S4 · Coasts, lakes and people
   type: session-header
   room: Room 1
-  description: 'Shorelines past and present: maar-lake microbialites as analogues for ancient stromatolites, modelling how Kati Thanda–Lake Eyre fills and dries and the waves that shape its shores, Holocene sea-level change in Narrm (Port Phillip Bay), and shell middens recording seasonal foraging on Gunditjmara Country.'
+  presenter: 'Chair: Ngozi Ulasi'
+  description: 'Shorelines past and present: maar-lake microbialites as analogues for ancient stromatolites, modelling how Kati Thanda–Lake Eyre fills and dries and the waves that shape its shores, and Holocene sea-level change in Narrm (Port Phillip Bay).'
 - id: d2-032-interpretations-and-implications-of-the-
   day: Day 2 — Friday 6 November
   time: '09:30'
@@ -289,23 +292,14 @@
   presenter: Sophie Golding Chan
   room: Room 1
   abstract: sophie-golding-chan
-- id: d2-036-reconstructing-holocene-environments-and
+- id: d2-036-morning-tea
   day: Day 2 — Friday 6 November
   time: '10:30'
-  end: '10:45'
-  title: Reconstructing Holocene Environments and Seasonal Foraging Practices through Mollusc Shell Sclerochronology in Western Victoria, Australia
-  type: talk
-  presenter: Tehreem Raza
-  room: Room 1
-  abstract: tehreem-raza
-- id: d2-037-morning-tea
-  day: Day 2 — Friday 6 November
-  time: '10:45'
   end: '11:15'
   title: Morning tea
   type: break
   room: Room 1
-- id: d2-038-gesss-nationwide-live-stream
+- id: d2-037-gesss-nationwide-live-stream
   day: Day 2 — Friday 6 November
   time: '11:00'
   end: '17:30'
@@ -313,15 +307,16 @@
   type: session-header
   room: Room 2
   description: Talks from GESSS hubs around Australia stream live in Room 2 alongside the VUEESC sessions. Room 2 is free during the Melbourne hub talks, which are in Room 1.
-- id: d2-039-s5-quaternary-archives-and-chronology
+- id: d2-038-s5-quaternary-archives-and-chronology
   day: Day 2 — Friday 6 November
   time: '11:15'
   end: '12:30'
   title: S5 · Quaternary archives and chronology
   type: session-header
   room: Room 1
+  presenter: 'Chair: Sophie Golding Chan'
   description: 'Dating and reading past climate: radiometric ages for two Early Pleistocene glacial terminations, a 36,000-year maar-lake record of abrupt Last Glacial climate events, ~194,000 years of Werribee River evolution, charcoal chemistry as a gauge of past fire intensity, and Antarctic fjord cores tracking Earth''s magnetic field.'
-- id: d2-040-radiometric-age-estimates-for-terminatio
+- id: d2-039-radiometric-age-estimates-for-terminatio
   day: Day 2 — Friday 6 November
   time: '11:15'
   end: '11:30'
@@ -330,7 +325,7 @@
   presenter: Ngozi Ulasi
   room: Room 1
   abstract: ngozi-ulasi
-- id: d2-041-investigating-the-impact-of-millennial-s
+- id: d2-040-investigating-the-impact-of-millennial-s
   day: Day 2 — Friday 6 November
   time: '11:30'
   end: '11:45'
@@ -339,7 +334,7 @@
   presenter: Louisa Sheridan
   room: Room 1
   abstract: louisa-sheridan
-- id: d2-042-tracing-quaternary-fluvial-evolution-thr
+- id: d2-041-tracing-quaternary-fluvial-evolution-thr
   day: Day 2 — Friday 6 November
   time: '11:45'
   end: '12:00'
@@ -348,7 +343,7 @@
   presenter: Ajisaka Octawiyano
   room: Room 1
   abstract: ajisaka-octawiyano
-- id: d2-043-fire-intensity-sensitivity-of-stable-car
+- id: d2-042-fire-intensity-sensitivity-of-stable-car
   day: Day 2 — Friday 6 November
   time: '12:00'
   end: '12:15'
@@ -357,7 +352,7 @@
   presenter: Harriet Magee
   room: Room 1
   abstract: harriet-magee
-- id: d2-044-two-antarctic-cores-one-magnetic-story
+- id: d2-043-two-antarctic-cores-one-magnetic-story
   day: Day 2 — Friday 6 November
   time: '12:15'
   end: '12:30'
@@ -366,15 +361,16 @@
   presenter: Mfoniso Anieti Otu
   room: Room 1
   abstract: mfoniso-anieti-otu
-- id: d2-045-s6-weather-extremes-and-water-part-1-ext
+- id: d2-044-s6-weather-extremes-and-water-part-1-ext
   day: Day 2 — Friday 6 November
   time: '12:30'
   end: '13:00'
   title: 'S6 · Weather extremes and water (part 1: extremes and hazards)'
   type: session-header
   room: Room 1
+  presenter: 'Chair: Carl Doedens'
   description: 'Extremes and hazards: rising hourly rainfall extremes in south-eastern Australia, and a trust- and uncertainty-aware approach to mapping wildfire susceptibility.'
-- id: d2-046-increasing-summertime-afternoon-hourly-r
+- id: d2-045-increasing-summertime-afternoon-hourly-r
   day: Day 2 — Friday 6 November
   time: '12:30'
   end: '12:45'
@@ -383,7 +379,7 @@
   presenter: Letitia Solly
   room: Room 1
   abstract: letitia-solly
-- id: d2-047-beyond-single-view-wildfire-susceptibili
+- id: d2-046-beyond-single-view-wildfire-susceptibili
   day: Day 2 — Friday 6 November
   time: '12:45'
   end: '13:00'
@@ -392,21 +388,22 @@
   presenter: Si Phong (Rowland) Nguyen
   room: Room 1
   abstract: si-phong-rowland-nguyen
-- id: d2-048-lunch
+- id: d2-047-lunch
   day: Day 2 — Friday 6 November
   time: '13:00'
   end: '13:45'
   title: Lunch
   type: lunch
-- id: d2-049-gesss-melbourne-hub
+- id: d2-048-gesss-melbourne-hub
   day: Day 2 — Friday 6 November
   time: '14:05'
   end: '15:05'
   title: GESSS Melbourne hub
   type: session-header
   room: Room 1
+  presenter: 'Chair: Alanis Olesch-Byrne'
   description: The Melbourne hub's GESSS Nationwide talks, given in person in Room 1 and streamed to hubs around Australia. The only session running.
-- id: d2-050-drought-to-wet-whiplash-in-australia-his
+- id: d2-049-drought-to-wet-whiplash-in-australia-his
   day: Day 2 — Friday 6 November
   time: '14:05'
   end: '14:15'
@@ -415,7 +412,7 @@
   presenter: Boying Lyu
   room: Room 1
   abstract: boying-lyu
-- id: d2-051-shifting-shorelines-an-exploration-of-la
+- id: d2-050-shifting-shorelines-an-exploration-of-la
   day: Day 2 — Friday 6 November
   time: '14:15'
   end: '14:25'
@@ -424,7 +421,7 @@
   presenter: Natasha Nagle
   room: Room 1
   abstract: natasha-nagle
-- id: d2-052-spatial-and-temporal-variability-in-wave
+- id: d2-051-spatial-and-temporal-variability-in-wave
   day: Day 2 — Friday 6 November
   time: '14:25'
   end: '14:35'
@@ -433,7 +430,7 @@
   presenter: Yangxue Chen
   room: Room 1
   abstract: yangxue-chen
-- id: d2-053-uses-and-interpretation-of-muographic-op
+- id: d2-052-uses-and-interpretation-of-muographic-op
   day: Day 2 — Friday 6 November
   time: '14:35'
   end: '14:45'
@@ -442,7 +439,7 @@
   presenter: Tom McNamara
   room: Room 1
   abstract: tom-mcnamara
-- id: d2-054-redefining-the-source-of-orogenic-gold-d
+- id: d2-053-redefining-the-source-of-orogenic-gold-d
   day: Day 2 — Friday 6 November
   time: '14:45'
   end: '14:55'
@@ -451,7 +448,7 @@
   presenter: Ithay Rott
   room: Room 1
   abstract: ithay-rott
-- id: d2-055-from-gabbro-weathering-to-rock-varnish-m
+- id: d2-054-from-gabbro-weathering-to-rock-varnish-m
   day: Day 2 — Friday 6 November
   time: '14:55'
   end: '15:05'
@@ -460,15 +457,16 @@
   presenter: Ishara Pathirage
   room: Room 1
   abstract: ishara-pathirage
-- id: d2-056-s6-weather-extremes-and-water-part-2-wat
+- id: d2-055-s6-weather-extremes-and-water-part-2-wat
   day: Day 2 — Friday 6 November
   time: '15:05'
   end: '15:35'
   title: 'S6 · Weather extremes and water (part 2: water and drought)'
   type: session-header
   room: Room 1
+  presenter: 'Chair: Carl Doedens'
   description: 'Water and drought: mapping household water demand in flood- and subsidence-prone Pekalongan, Indonesia, and the atmospheric patterns that build, intensify and break multi-year droughts.'
-- id: d2-057-spatial-distribution-of-water-demand-for
+- id: d2-056-spatial-distribution-of-water-demand-for
   day: Day 2 — Friday 6 November
   time: '15:05'
   end: '15:20'
@@ -477,7 +475,7 @@
   presenter: Afifudin
   room: Room 1
   abstract: afifudin
-- id: d2-058-atmospheric-processes-and-meteorological
+- id: d2-057-atmospheric-processes-and-meteorological
   day: Day 2 — Friday 6 November
   time: '15:20'
   end: '15:35'
@@ -486,13 +484,13 @@
   presenter: Ruchit Sandip Kulkarni
   room: Room 1
   abstract: ruchit-sandip-kulkarni
-- id: d2-059-afternoon-tea
+- id: d2-058-afternoon-tea
   day: Day 2 — Friday 6 November
   time: '15:35'
   end: '16:00'
   title: Afternoon tea
   type: break
-- id: d2-060-gesss-keynote-volcanoes-ice-and-an-uncon
+- id: d2-059-gesss-keynote-volcanoes-ice-and-an-uncon
   day: Day 2 — Friday 6 November
   time: '16:00'
   end: '16:20'
@@ -500,15 +498,16 @@
   type: keynote
   presenter: Jodie Fox (Hobart, TAS)
   room: Room 1 & 2 (streamed)
-- id: d2-061-s7-climate-modes-and-the-cryosphere
+- id: d2-060-s7-climate-modes-and-the-cryosphere
   day: Day 2 — Friday 6 November
   time: '16:20'
   end: '17:20'
   title: S7 · Climate modes and the cryosphere
   type: session-header
   room: Room 1
+  presenter: 'Chair: Anna Zehrung'
   description: 'How large-scale climate shapes the frozen world: ENSO''s response to volcanic eruptions over the last millennium, how covarying climate modes drive Antarctic surface mass balance, what controls Himalayan glacier thermal regimes, and global evidence that mining dust is darkening nearby glaciers.'
-- id: d2-062-el-nino-southern-oscillation-dynamical-r
+- id: d2-061-el-nino-southern-oscillation-dynamical-r
   day: Day 2 — Friday 6 November
   time: '16:20'
   end: '16:35'
@@ -517,7 +516,7 @@
   presenter: Flynn Thompson
   room: Room 1
   abstract: flynn-thompson
-- id: d2-063-covariability-in-large-scale-climate-mod
+- id: d2-062-covariability-in-large-scale-climate-mod
   day: Day 2 — Friday 6 November
   time: '16:35'
   end: '16:50'
@@ -526,7 +525,7 @@
   presenter: Jack Travers
   room: Room 1
   abstract: jack-travers
-- id: d2-064-controls-on-himalayan-glacier-thermal-re
+- id: d2-063-controls-on-himalayan-glacier-thermal-re
   day: Day 2 — Friday 6 November
   time: '16:50'
   end: '17:05'
@@ -534,7 +533,7 @@
   type: talk
   presenter: Tirthankar Ghosh
   room: Room 1
-- id: d2-065-from-mine-to-melt-global-scale-evidence-
+- id: d2-064-from-mine-to-melt-global-scale-evidence-
   day: Day 2 — Friday 6 November
   time: '17:05'
   end: '17:20'
@@ -542,21 +541,21 @@
   type: talk
   presenter: Fakhra Muneeb
   room: Room 1
-- id: d2-066-gesss-closing-remarks-and-national-prize
+- id: d2-065-gesss-closing-remarks-and-national-prize
   day: Day 2 — Friday 6 November
   time: '17:20'
   end: '17:30'
   title: GESSS closing remarks and national prizes
   type: plenary
   room: Room 1 & 2 (streamed)
-- id: d2-067-vueesc-closing-and-prizes
+- id: d2-066-vueesc-closing-and-prizes
   day: Day 2 — Friday 6 November
   time: '17:30'
   end: '18:00'
   title: VUEESC closing and prizes
   type: plenary
   room: Room 1
-- id: d1-068-how-basic-can-you-get-constraining-secon
+- id: d1-067-how-basic-can-you-get-constraining-secon
   day: Day 1 — Thursday 5 November
   time: '11:30'
   end: '11:40'
@@ -564,7 +563,7 @@
   type: talk
   presenter: Alex Molyneux (Canberra, ACT)
   room: Room 2
-- id: d1-069-late-quaternary-records-of-environmental
+- id: d1-068-late-quaternary-records-of-environmental
   day: Day 1 — Thursday 5 November
   time: '11:40'
   end: '11:50'
@@ -572,7 +571,7 @@
   type: talk
   presenter: Zara Smith (Brisbane, QLD)
   room: Room 2
-- id: d1-070-mafic-magma-recharge-driving-the-taal-19
+- id: d1-069-mafic-magma-recharge-driving-the-taal-19
   day: Day 1 — Thursday 5 November
   time: '11:50'
   end: '12:00'
@@ -580,7 +579,7 @@
   type: talk
   presenter: Valerie Shayne Olfindo (Brisbane, QLD)
   room: Room 2
-- id: d1-071-how-hot-was-the-archaean-mantle-thermody
+- id: d1-070-how-hot-was-the-archaean-mantle-thermody
   day: Day 1 — Thursday 5 November
   time: '12:00'
   end: '12:10'
@@ -588,7 +587,7 @@
   type: talk
   presenter: Shubhadeep Roy (Brisbane, QLD)
   room: Room 2
-- id: d1-072-revealing-the-cranial-anatomy-of-the-wes
+- id: d1-071-revealing-the-cranial-anatomy-of-the-wes
   day: Day 1 — Thursday 5 November
   time: '12:10'
   end: '12:20'
@@ -596,7 +595,7 @@
   type: talk
   presenter: Blake Forrest (Armidale, NSW)
   room: Room 2
-- id: d1-073-multi-proxy-chronostratigraphy-of-the-ca
+- id: d1-072-multi-proxy-chronostratigraphy-of-the-ca
   day: Day 1 — Thursday 5 November
   time: '12:20'
   end: '12:30'
@@ -604,7 +603,7 @@
   type: talk
   presenter: Henry Edward Calvert Grant (Armidale, NSW)
   room: Room 2
-- id: d1-074-a-diapsid-braincase-from-the-late-cretac
+- id: d1-073-a-diapsid-braincase-from-the-late-cretac
   day: Day 1 — Thursday 5 November
   time: '12:30'
   end: '12:40'
@@ -612,7 +611,7 @@
   type: talk
   presenter: Ethan Downie (Armidale, NSW)
   room: Room 2
-- id: d1-075-on-the-biogeographic-conundrum-that-is-s
+- id: d1-074-on-the-biogeographic-conundrum-that-is-s
   day: Day 1 — Thursday 5 November
   time: '12:40'
   end: '12:50'
@@ -620,7 +619,7 @@
   type: talk
   presenter: Josh Gardiner (Armidale, NSW)
   room: Room 2
-- id: d1-076-understanding-hydrogen-and-helium-system
+- id: d1-075-understanding-hydrogen-and-helium-system
   day: Day 1 — Thursday 5 November
   time: '12:50'
   end: '13:00'
@@ -628,7 +627,7 @@
   type: talk
   presenter: Ian Rogers (Perth, WA)
   room: Room 2
-- id: d1-077-a-multi-billion-year-crustal-record-from
+- id: d1-076-a-multi-billion-year-crustal-record-from
   day: Day 1 — Thursday 5 November
   time: '13:45'
   end: '13:55'
@@ -636,7 +635,7 @@
   type: talk
   presenter: Matthew Zhang (Xiaodong) (Perth, WA)
   room: Room 2
-- id: d1-078-from-alcheringa-to-beyond
+- id: d1-077-from-alcheringa-to-beyond
   day: Day 1 — Thursday 5 November
   time: '13:55'
   end: '14:05'
@@ -644,7 +643,7 @@
   type: talk
   presenter: Heidi Jane Allen (Perth, WA)
   room: Room 2
-- id: d1-079-upper-cretaceous-pliosaurid-teeth-from-w
+- id: d1-078-upper-cretaceous-pliosaurid-teeth-from-w
   day: Day 1 — Thursday 5 November
   time: '14:05'
   end: '14:15'
@@ -652,7 +651,7 @@
   type: talk
   presenter: Rhys Meyerkort (Perth, WA)
   room: Room 2
-- id: d1-080-microbial-sulfur-redox-cycling-controls-
+- id: d1-079-microbial-sulfur-redox-cycling-controls-
   day: Day 1 — Thursday 5 November
   time: '14:15'
   end: '14:25'
@@ -660,7 +659,7 @@
   type: talk
   presenter: Andrew Ji Yao Jian (Perth, WA)
   room: Room 2
-- id: d1-081-geological-palaeoenvironmental-and-palae
+- id: d1-080-geological-palaeoenvironmental-and-palae
   day: Day 1 — Thursday 5 November
   time: '14:25'
   end: '14:35'
@@ -668,7 +667,7 @@
   type: talk
   presenter: Morgane L. Perret Lévesque (Perth, WA)
   room: Room 2
-- id: d1-082-quantifying-shape-of-albian-dimitobelid-
+- id: d1-081-quantifying-shape-of-albian-dimitobelid-
   day: Day 1 — Thursday 5 November
   time: '14:35'
   end: '14:45'
@@ -676,7 +675,7 @@
   type: talk
   presenter: Helen Ryan (Perth, WA)
   room: Room 2
-- id: d1-083-the-largest-stereospondyl-so-far-from-th
+- id: d1-082-the-largest-stereospondyl-so-far-from-th
   day: Day 1 — Thursday 5 November
   time: '14:45'
   end: '14:55'
@@ -684,7 +683,7 @@
   type: talk
   presenter: Ashlea Turner (Townsville, QLD)
   room: Room 2
-- id: d1-084-what-drives-the-transition-from-wide-to-
+- id: d1-083-what-drives-the-transition-from-wide-to-
   day: Day 1 — Thursday 5 November
   time: '14:55'
   end: '15:05'
@@ -692,7 +691,7 @@
   type: talk
   presenter: Tabitha Colborne (Townsville, QLD)
   room: Room 2
-- id: d1-085-optical-microscopy-for-identifying-defor
+- id: d1-084-optical-microscopy-for-identifying-defor
   day: Day 1 — Thursday 5 November
   time: '15:05'
   end: '15:15'
@@ -700,7 +699,7 @@
   type: talk
   presenter: Elizabeth Marino (Townsville, QLD)
   room: Room 2
-- id: d1-086-palaeobiology-of-phyllozoon-hanseni-from
+- id: d1-085-palaeobiology-of-phyllozoon-hanseni-from
   day: Day 1 — Thursday 5 November
   time: '16:20'
   end: '16:30'
@@ -708,7 +707,7 @@
   type: talk
   presenter: Xavier James Damiani (Adelaide, SA)
   room: Room 2
-- id: d1-087-the-rhizodontids-and-tetrapods-tetrapodo
+- id: d1-086-the-rhizodontids-and-tetrapods-tetrapodo
   day: Day 1 — Thursday 5 November
   time: '16:30'
   end: '16:40'
@@ -716,7 +715,7 @@
   type: talk
   presenter: Joshua Batt (Adelaide, SA)
   room: Room 2
-- id: d1-088-exploring-the-taphonomy-of-the-exception
+- id: d1-087-exploring-the-taphonomy-of-the-exception
   day: Day 1 — Thursday 5 November
   time: '16:40'
   end: '16:50'
@@ -724,7 +723,7 @@
   type: talk
   presenter: Thomas Turner (Adelaide, SA)
   room: Room 2
-- id: d1-089-the-skillogalee-dolomite-in-a-changing-n
+- id: d1-088-the-skillogalee-dolomite-in-a-changing-n
   day: Day 1 — Thursday 5 November
   time: '16:50'
   end: '17:00'
@@ -732,7 +731,7 @@
   type: talk
   presenter: Darius Boast (Adelaide, SA)
   room: Room 2
-- id: d1-090-dating-multi-generation-hydrothermal-bri
+- id: d1-089-dating-multi-generation-hydrothermal-bri
   day: Day 1 — Thursday 5 November
   time: '17:00'
   end: '17:10'
@@ -740,7 +739,7 @@
   type: talk
   presenter: Mariella Greenaway (Adelaide, SA)
   room: Room 2
-- id: d1-091-sulfides-as-tracers-of-critical-metals-a
+- id: d1-090-sulfides-as-tracers-of-critical-metals-a
   day: Day 1 — Thursday 5 November
   time: '17:10'
   end: '17:20'
@@ -748,7 +747,7 @@
   type: talk
   presenter: Gabriel Cellier (Townsville, QLD)
   room: Room 2
-- id: d1-092-refining-tephrostratigraphic-correlation
+- id: d1-091-refining-tephrostratigraphic-correlation
   day: Day 1 — Thursday 5 November
   time: '17:20'
   end: '17:30'
@@ -756,28 +755,28 @@
   type: talk
   presenter: Sebastian Jurado Hernandez (Townsville, QLD)
   room: Room 2
-- id: d1-093-gesss-afternoon-break
+- id: d1-092-gesss-afternoon-break
   day: Day 1 — Thursday 5 November
   time: '15:15'
   end: '15:45'
   title: GESSS afternoon break
   type: break
   room: Room 2
-- id: d1-094-gesss-day-1-closing-remarks
+- id: d1-093-gesss-day-1-closing-remarks
   day: Day 1 — Thursday 5 November
   time: '17:30'
   end: '17:40'
   title: GESSS Day 1 closing remarks
   type: plenary
   room: Room 2
-- id: d2-095-gesss-nationwide-opening
+- id: d2-094-gesss-nationwide-opening
   day: Day 2 — Friday 6 November
   time: '11:00'
   end: '11:10'
   title: GESSS Nationwide opening
   type: plenary
   room: Room 2
-- id: d2-096-early-earth-microbialites-and-clues-to-e
+- id: d2-095-early-earth-microbialites-and-clues-to-e
   day: Day 2 — Friday 6 November
   time: '11:10'
   end: '11:20'
@@ -785,7 +784,7 @@
   type: talk
   presenter: Sailakshmi Cholanilath (Sydney, NSW)
   room: Room 2
-- id: d2-097-reconstructing-dinosaur-diets-in-ancient
+- id: d2-096-reconstructing-dinosaur-diets-in-ancient
   day: Day 2 — Friday 6 November
   time: '11:20'
   end: '11:30'
@@ -793,7 +792,7 @@
   type: talk
   presenter: Christopher D. Vournazos (Sydney, NSW)
   room: Room 2
-- id: d2-098-linking-stratigraphic-forward-modelling-
+- id: d2-097-linking-stratigraphic-forward-modelling-
   day: Day 2 — Friday 6 November
   time: '11:30'
   end: '11:40'
@@ -801,7 +800,7 @@
   type: talk
   presenter: Rafael Cherene (Sydney, NSW)
   room: Room 2
-- id: d2-099-investigating-mine-based-geothermal-ener
+- id: d2-098-investigating-mine-based-geothermal-ener
   day: Day 2 — Friday 6 November
   time: '11:40'
   end: '11:50'
@@ -809,7 +808,7 @@
   type: talk
   presenter: Chamini Sandunika Waravita (Sydney, NSW)
   room: Room 2
-- id: d2-100-from-rocks-to-geophysics-petrophysical-p
+- id: d2-099-from-rocks-to-geophysics-petrophysical-p
   day: Day 2 — Friday 6 November
   time: '11:50'
   end: '12:00'
@@ -817,7 +816,7 @@
   type: talk
   presenter: Puqing Li (Sydney, NSW)
   room: Room 2
-- id: d2-101-riftplume-interaction-and-microplate-evo
+- id: d2-100-riftplume-interaction-and-microplate-evo
   day: Day 2 — Friday 6 November
   time: '12:00'
   end: '12:10'
@@ -825,7 +824,7 @@
   type: talk
   presenter: Caesar Augusto Rigoti (Sydney, NSW)
   room: Room 2
-- id: d2-102-investigating-granulite-facies-metamorph
+- id: d2-101-investigating-granulite-facies-metamorph
   day: Day 2 — Friday 6 November
   time: '12:10'
   end: '12:20'
@@ -833,7 +832,7 @@
   type: talk
   presenter: Penelope Beltran-Rehberg (Sydney, NSW)
   room: Room 2
-- id: d2-103-deciphering-cryptic-rare-earth-element-e
+- id: d2-102-deciphering-cryptic-rare-earth-element-e
   day: Day 2 — Friday 6 November
   time: '12:20'
   end: '12:30'
@@ -841,7 +840,7 @@
   type: talk
   presenter: Rory Carter (Sydney, NSW)
   room: Room 2
-- id: d2-104-the-garnet-factory-a-hree-reservoir
+- id: d2-103-the-garnet-factory-a-hree-reservoir
   day: Day 2 — Friday 6 November
   time: '12:30'
   end: '12:40'
@@ -849,7 +848,7 @@
   type: talk
   presenter: Michael Fakes (Adelaide, SA)
   room: Room 2
-- id: d2-105-enigmatic-origins-of-the-rarest-most-eco
+- id: d2-104-enigmatic-origins-of-the-rarest-most-eco
   day: Day 2 — Friday 6 November
   time: '12:40'
   end: '12:50'
@@ -857,7 +856,7 @@
   type: talk
   presenter: Holly Cooke (Adelaide, SA)
   room: Room 2
-- id: d2-106-carbonatite-melt-pathways-connect-the-de
+- id: d2-105-carbonatite-melt-pathways-connect-the-de
   day: Day 2 — Friday 6 November
   time: '12:50'
   end: '13:00'
@@ -865,7 +864,7 @@
   type: talk
   presenter: David Baker (Adelaide, SA)
   room: Room 2
-- id: d2-107-reconstructing-holocene-fire-history-on-
+- id: d2-106-reconstructing-holocene-fire-history-on-
   day: Day 2 — Friday 6 November
   time: '13:45'
   end: '13:55'
@@ -873,7 +872,7 @@
   type: talk
   presenter: Evandro Augusto de Souza Magalhaes (Adelaide, SA)
   room: Room 2
-- id: d2-108-inferring-climate-change-in-south-west-w
+- id: d2-107-inferring-climate-change-in-south-west-w
   day: Day 2 — Friday 6 November
   time: '13:55'
   end: '14:05'
@@ -881,7 +880,7 @@
   type: talk
   presenter: Teye Frederik Nicolaas Aukes (Adelaide, SA)
   room: Room 2
-- id: d2-109-walking-worms-part-describing-the-first-
+- id: d2-108-walking-worms-part-describing-the-first-
   day: Day 2 — Friday 6 November
   time: '15:05'
   end: '15:15'
@@ -889,7 +888,7 @@
   type: talk
   presenter: Eleanor V. Y. Beidatsch (Albany, WA)
   room: Room 2
-- id: d2-110-eocene-coral-sea-tectonics-constraints-f
+- id: d2-109-eocene-coral-sea-tectonics-constraints-f
   day: Day 2 — Friday 6 November
   time: '16:20'
   end: '16:30'
@@ -897,7 +896,7 @@
   type: talk
   presenter: Will Sinclair (Hobart, TAS)
   room: Room 2
-- id: d2-111-beyond-rounding-pumice-shape-evolution-a
+- id: d2-110-beyond-rounding-pumice-shape-evolution-a
   day: Day 2 — Friday 6 November
   time: '16:30'
   end: '16:40'
@@ -905,7 +904,7 @@
   type: talk
   presenter: Maelys Moulin (Hobart, TAS)
   room: Room 2
-- id: d2-112-geochronological-constraints-for-tasmani
+- id: d2-111-geochronological-constraints-for-tasmani
   day: Day 2 — Friday 6 November
   time: '16:40'
   end: '16:50'
@@ -913,7 +912,7 @@
   type: talk
   presenter: Kaitlyn Ainscow (Hobart, TAS)
   room: Room 2
-- id: d2-113-a-not-so-ordinary-chondrite
+- id: d2-112-a-not-so-ordinary-chondrite
   day: Day 2 — Friday 6 November
   time: '16:50'
   end: '17:00'
@@ -921,7 +920,7 @@
   type: talk
   presenter: Gabrielle Kaye O'Toole (Hobart, TAS)
   room: Room 2
-- id: d2-114-parameterizing-lunar-seismic-scattering
+- id: d2-113-parameterizing-lunar-seismic-scattering
   day: Day 2 — Friday 6 November
   time: '17:00'
   end: '17:10'
@@ -929,7 +928,7 @@
   type: talk
   presenter: Turki Moaaf (Canberra, ACT)
   room: Room 2
-- id: d2-115-an-appetite-for-apatite-investigating-ap
+- id: d2-114-an-appetite-for-apatite-investigating-ap
   day: Day 2 — Friday 6 November
   time: '17:10'
   end: '17:20'
@@ -937,14 +936,14 @@
   type: talk
   presenter: Katya Orlova (Canberra, ACT)
   room: Room 2
-- id: d2-116-room-2-free-the-melbourne-hub-talks-are-
+- id: d2-115-room-2-free-the-melbourne-hub-talks-are-
   day: Day 2 — Friday 6 November
   time: '14:05'
   end: '15:05'
   title: 'Room 2 free: the Melbourne hub talks are in Room 1'
   type: break
   room: Room 2
-- id: d2-117-gesss-afternoon-break
+- id: d2-116-gesss-afternoon-break
   day: Day 2 — Friday 6 November
   time: '15:15'
   end: '15:35'
