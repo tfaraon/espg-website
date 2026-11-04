@@ -501,12 +501,12 @@
 - id: d2-060-s7-climate-modes-and-the-cryosphere
   day: Day 2 — Friday 6 November
   time: '16:20'
-  end: '17:20'
+  end: '17:05'
   title: S7 · Climate modes and the cryosphere
   type: session-header
   room: Room 1
   presenter: 'Chair: Ida Jandl'
-  description: 'How large-scale climate shapes the frozen world: ENSO''s response to volcanic eruptions over the last millennium, how covarying climate modes drive Antarctic surface mass balance, what controls Himalayan glacier thermal regimes, and global evidence that mining dust is darkening nearby glaciers.'
+  description: 'How large-scale climate shapes the frozen world: ENSO''s response to volcanic eruptions over the last millennium, how covarying climate modes drive Antarctic surface mass balance, and what controls Himalayan glacier thermal regimes.'
 - id: d2-061-el-nino-southern-oscillation-dynamical-r
   day: Day 2 — Friday 6 November
   time: '16:20'
@@ -533,13 +533,12 @@
   type: talk
   presenter: Tirthankar Ghosh
   room: Room 1
-- id: d2-064-from-mine-to-melt-global-scale-evidence-
+- id: d2-064-short-break
   day: Day 2 — Friday 6 November
   time: '17:05'
   end: '17:20'
-  title: 'From Mine to Melt: Global-Scale Evidence Linking Mining Proximity to Glacier Albedo Decline'
-  type: talk
-  presenter: Fakhra Muneeb
+  title: Short break
+  type: break
   room: Room 1
 - id: d2-065-gesss-closing-remarks-and-national-prize
   day: Day 2 — Friday 6 November
