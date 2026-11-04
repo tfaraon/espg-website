@@ -2,6 +2,41 @@
 import ConferenceLayout from '../../layouts/ConferenceLayout.astro';
 import Ridgeline from '../../components/conference/Ridgeline.astro';
 import { url } from '../../lib/url';
+
+// VUEESC × GESSS 2026 organising committee (not the ESPG society committee, which is on the About page).
+const EXECUTIVE = [
+  { name: 'Alanis Olesch-Byrne', role: 'Co-Chair' },
+  { name: 'Mana Ryuba', role: 'Co-Chair' },
+  { name: 'Tom McNamara', role: 'Treasurer' },
+  { name: 'Sophie Golding Chan', role: 'Secretary' },
+];
+const GENERAL = [
+  { name: 'James La Greca', role: 'Webmaster and programs' },
+  { name: 'Harriet Magee' },
+  { name: 'Louisa Sheridan' },
+  { name: 'Ahmad Emamian' },
+  { name: 'Bianca Estrada Figueroa' },
+  { name: 'Anthony Romano' },
+  { name: 'Shinta Aritonang' },
+  { name: 'Lovensia Albasit' },
+  { name: 'Anna Zehrung' },
+  { name: 'Bridget Cui' },
+  { name: 'Jeremy Wyman' },
+  { name: 'Aisyah Mohammad Sulhanuddin' },
+];
+const SPONSORS = [
+  {
+    name: 'School of Geography, Earth and Atmospheric Sciences (SGEAS)',
+    org: 'University of Melbourne',
+    href: 'https://sgeas.unimelb.edu.au/',
+  },
+  { name: 'Graduate Student Association', org: 'University of Melbourne', href: 'https://gsa.unimelb.edu.au/' },
+  {
+    name: 'Geological Society of Australia',
+    org: 'Victoria Division',
+    href: 'https://www.gsa.org.au/communities/divisions/victoria/',
+  },
+];
 ---
 
 <ConferenceLayout
@@ -71,6 +106,41 @@ import { url } from '../../lib/url';
   <p>
     <a href={url('/membership')}>Join ESPG</a> to get conference updates by email.
   </p>
+
+  <section id="committee">
+    <h2>Organising committee</h2>
+    <p class="muted">VUEESC × GESSS 2026 is organised by postgraduate students and hosted by ESPG.</p>
+    <h3 class="group">Executive committee</h3>
+    <ul class="people people--exec">
+      {EXECUTIVE.map((p) => (
+        <li><span class="role">{p.role}</span><span class="name">{p.name}</span></li>
+      ))}
+    </ul>
+    <h3 class="group">General committee</h3>
+    <ul class="people">
+      {GENERAL.map((p) => (
+        <li>
+          <span class="name">{p.name}</span>
+          {p.role && <span class="role">{p.role}</span>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section id="sponsors">
+    <h2>Sponsors</h2>
+    <p class="muted">Thank you to our sponsors for supporting VUEESC × GESSS 2026.</p>
+    <ul class="sponsors">
+      {SPONSORS.map((s) => (
+        <li>
+          <a href={s.href} target="_blank" rel="noopener noreferrer">
+            <span class="name">{s.name}</span>
+            <span class="org">{s.org}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
 </ConferenceLayout>
 
 <style>
@@ -157,6 +227,77 @@ import { url } from '../../lib/url';
     border-radius: 50%;
     background: var(--grad);
   }
+
+  /* Organising committee and sponsors */
+  .group {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--teal);
+    margin: 1.75rem 0 0.75rem;
+  }
+  .people,
+  .sponsors {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .people { grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr)); }
+  /* Four executive roles: 2 × 2, or one row on wide screens, so no card sits alone */
+  .people--exec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 60rem) { .people--exec { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (max-width: 30rem) { .people--exec { grid-template-columns: 1fr; } }
+  .people li {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+  .people .name { font-weight: 600; line-height: 1.35; }
+  .people .role {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+  }
+  .people--exec li { padding: 1rem 1.1rem; border-top: 3px solid var(--teal); }
+  .people--exec .role { color: var(--teal); }
+  .people--exec .name { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.2; }
+
+  .sponsors { grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); margin-top: 1.25rem; }
+  .sponsors a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 1.1rem 1.25rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    color: var(--ink);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .sponsors a::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--grad);
+  }
+  .sponsors a:hover { border-color: var(--teal); }
+  .sponsors a:hover .name { text-decoration: underline; text-underline-offset: 3px; }
+  .sponsors .name { font-weight: 600; line-height: 1.35; }
+  .sponsors .org { font-size: 0.9rem; color: var(--ink-soft); }
 
   @media (max-width: 420px) {
     .wordmark { font-size: 2.35rem; }
